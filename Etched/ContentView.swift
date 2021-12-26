@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var viewRouter: ViewRouter
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        if viewRouter.isNewUser {
+            OnboardingView()
+        } else {
+            MainTabView()
+        }
+//        switch viewRouter.currentView {
+//        case .onboarding:
+//            OnboardingView()
+//        case .main:
+//            Text("Main")
+//        }
     }
 }
 
