@@ -12,7 +12,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $currentPage) {
-            Text("Home")
+            JournalListView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }

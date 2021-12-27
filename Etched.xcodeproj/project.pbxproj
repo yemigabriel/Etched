@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A082353B27798A88006B9FAE /* LocationMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082353A27798A88006B9FAE /* LocationMO+CoreDataProperties.swift */; };
+		A082353D27798A94006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082353C27798A94006B9FAE /* MoodMO+CoreDataProperties.swift */; };
+		A082353F27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082353E27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift */; };
+		A0823541277A314B006B9FAE /* JournalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823540277A314B006B9FAE /* JournalCardView.swift */; };
 		A09D7A4C2778687900D11842 /* EtchedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A4B2778687900D11842 /* EtchedApp.swift */; };
 		A09D7A4E2778687900D11842 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A4D2778687900D11842 /* ContentView.swift */; };
 		A09D7A502778687B00D11842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09D7A4F2778687B00D11842 /* Assets.xcassets */; };
@@ -17,9 +21,23 @@
 		A09D7A612778726B00D11842 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A602778726B00D11842 /* ViewRouter.swift */; };
 		A09D7A64277893B600D11842 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A63277893B600D11842 /* MainTabView.swift */; };
 		A09D7A66277896B200D11842 /* MainTabPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A65277896B200D11842 /* MainTabPage.swift */; };
+		A09D7A682778B34500D11842 /* JournalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A672778B34500D11842 /* JournalListView.swift */; };
+		A09D7A6A2778C25B00D11842 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A692778C25B00D11842 /* Journal.swift */; };
+		A09D7A6C2778CEE700D11842 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A6B2778CEE700D11842 /* JournalViewModel.swift */; };
+		A09D7A722778D41D00D11842 /* JournalMO.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A702778D41D00D11842 /* JournalMO.xcdatamodeld */; };
+		A09D7A792778DF1F00D11842 /* LocationMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A732778DF1F00D11842 /* LocationMO+CoreDataClass.swift */; };
+		A09D7A7A2778DF1F00D11842 /* LocationMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A742778DF1F00D11842 /* LocationMO+CoreDataProperties.swift */; };
+		A09D7A7B2778DF1F00D11842 /* MoodMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A752778DF1F00D11842 /* MoodMO+CoreDataClass.swift */; };
+		A09D7A7D2778DF1F00D11842 /* JournalMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A772778DF1F00D11842 /* JournalMO+CoreDataClass.swift */; };
+		A09D7A7E2778DF1F00D11842 /* JournalMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A782778DF1F00D11842 /* JournalMO+CoreDataProperties.swift */; };
+		A09D7A802778E6C700D11842 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A082353A27798A88006B9FAE /* LocationMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LocationMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A082353C27798A94006B9FAE /* MoodMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoodMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A082353E27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoodMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A0823540277A314B006B9FAE /* JournalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCardView.swift; sourceTree = "<group>"; };
 		A09D7A482778687900D11842 /* Etched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etched.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09D7A4B2778687900D11842 /* EtchedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtchedApp.swift; sourceTree = "<group>"; };
 		A09D7A4D2778687900D11842 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +49,16 @@
 		A09D7A602778726B00D11842 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		A09D7A63277893B600D11842 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		A09D7A65277896B200D11842 /* MainTabPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPage.swift; sourceTree = "<group>"; };
+		A09D7A672778B34500D11842 /* JournalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListView.swift; sourceTree = "<group>"; };
+		A09D7A692778C25B00D11842 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		A09D7A6B2778CEE700D11842 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
+		A09D7A712778D41D00D11842 /* JournalMO.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JournalMO.xcdatamodel; sourceTree = "<group>"; };
+		A09D7A732778DF1F00D11842 /* LocationMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A09D7A742778DF1F00D11842 /* LocationMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A09D7A752778DF1F00D11842 /* MoodMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MoodMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A09D7A772778DF1F00D11842 /* JournalMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalMO+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A09D7A782778DF1F00D11842 /* JournalMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +91,14 @@
 		A09D7A4A2778687900D11842 /* Etched */ = {
 			isa = PBXGroup;
 			children = (
+				A09D7A732778DF1F00D11842 /* LocationMO+CoreDataClass.swift */,
+				A082353C27798A94006B9FAE /* MoodMO+CoreDataProperties.swift */,
+				A082353E27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift */,
+				A09D7A742778DF1F00D11842 /* LocationMO+CoreDataProperties.swift */,
+				A082353A27798A88006B9FAE /* LocationMO+CoreDataProperties.swift */,
+				A09D7A752778DF1F00D11842 /* MoodMO+CoreDataClass.swift */,
+				A09D7A772778DF1F00D11842 /* JournalMO+CoreDataClass.swift */,
+				A09D7A782778DF1F00D11842 /* JournalMO+CoreDataProperties.swift */,
 				A09D7A622778938B00D11842 /* Journal */,
 				A09D7A592778696100D11842 /* Onboarding */,
 				A09D7A4B2778687900D11842 /* EtchedApp.swift */,
@@ -97,6 +133,12 @@
 		A09D7A622778938B00D11842 /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				A09D7A672778B34500D11842 /* JournalListView.swift */,
+				A09D7A692778C25B00D11842 /* Journal.swift */,
+				A09D7A6B2778CEE700D11842 /* JournalViewModel.swift */,
+				A09D7A702778D41D00D11842 /* JournalMO.xcdatamodeld */,
+				A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */,
+				A0823540277A314B006B9FAE /* JournalCardView.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -171,14 +213,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A082353F27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */,
+				A082353D27798A94006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */,
+				A09D7A7B2778DF1F00D11842 /* MoodMO+CoreDataClass.swift in Sources */,
+				A09D7A6C2778CEE700D11842 /* JournalViewModel.swift in Sources */,
 				A09D7A5B2778698C00D11842 /* OnboardingView.swift in Sources */,
+				A09D7A6A2778C25B00D11842 /* Journal.swift in Sources */,
 				A09D7A5F277869C700D11842 /* Page.swift in Sources */,
+				A082353B27798A88006B9FAE /* LocationMO+CoreDataProperties.swift in Sources */,
 				A09D7A4E2778687900D11842 /* ContentView.swift in Sources */,
+				A09D7A722778D41D00D11842 /* JournalMO.xcdatamodeld in Sources */,
 				A09D7A612778726B00D11842 /* ViewRouter.swift in Sources */,
 				A09D7A64277893B600D11842 /* MainTabView.swift in Sources */,
 				A09D7A66277896B200D11842 /* MainTabPage.swift in Sources */,
+				A09D7A7D2778DF1F00D11842 /* JournalMO+CoreDataClass.swift in Sources */,
+				A09D7A682778B34500D11842 /* JournalListView.swift in Sources */,
+				A09D7A802778E6C700D11842 /* CoreDataHelper.swift in Sources */,
 				A09D7A5D277869A000D11842 /* OnboardingPageView.swift in Sources */,
 				A09D7A4C2778687900D11842 /* EtchedApp.swift in Sources */,
+				A09D7A7E2778DF1F00D11842 /* JournalMO+CoreDataProperties.swift in Sources */,
+				A09D7A7A2778DF1F00D11842 /* LocationMO+CoreDataProperties.swift in Sources */,
+				A0823541277A314B006B9FAE /* JournalCardView.swift in Sources */,
+				A09D7A792778DF1F00D11842 /* LocationMO+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +437,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A09D7A702778D41D00D11842 /* JournalMO.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A09D7A712778D41D00D11842 /* JournalMO.xcdatamodel */,
+			);
+			currentVersion = A09D7A712778D41D00D11842 /* JournalMO.xcdatamodel */;
+			path = JournalMO.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A09D7A402778687900D11842 /* Project object */;
 }
