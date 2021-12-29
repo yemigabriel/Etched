@@ -10,20 +10,20 @@ import Foundation
 struct Journal: Identifiable, Codable {
     let id: UUID
     var content: String
-    let timestamp: Date
+    var timestamp: Date
     var images: [String]?
     var audio: String?
     var video: String?
     var location: Location?
     var mood: Mood?
     
-    var formattedDate: String {
-        var formattedDate = "Unknown"
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        formattedDate = dateFormatter.string(from: timestamp)
-        return formattedDate
-    }
+//    var formattedDate: String {
+//        var formattedDate = "Unknown"
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateStyle = .medium
+//        formattedDate = dateFormatter.string(from: timestamp)
+//        return formattedDate
+//    }
     
     // samples
     static let location0 = Location(id: UUID(), name: "Earth", latitude: 0, longitude: 0)
@@ -52,4 +52,14 @@ struct Mood: Identifiable, Codable {
     var id: UUID?
     var name: String?
     var emoji: String?
+}
+
+extension Date {
+    func formattedShortDate() -> String {
+        var formattedDate = "Unknown"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        formattedDate = dateFormatter.string(from: self)
+        return formattedDate
+    }
 }

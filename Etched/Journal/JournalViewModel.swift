@@ -10,25 +10,27 @@ import SwiftUI
 
 class JournalViewModel: ObservableObject {
     
-    @Published var journals = [Journal]()
+//    @Published var journals = [Journal]()
     private var managedObjectContext = CoreDataHelper.shared.container.viewContext
-    
-//    @FetchRequest var journalMOs: FetchedResults<JournalMO>
+    @Published var journals = [JournalMO]()
+//    @Published var journal = Journal(id: UUID(), content: "", timestamp: Date())
+    @Published var journal = JournalMO(context: CoreDataHelper.shared.container.viewContext)
     
     init() {
-//        _journalMOs = FetchRequest(sortDescriptors: [], predicate: nil)
         getJournals()
     }
     
     func getJournals() {
+        
 //        var journals: [Journal] = []
         journals.removeAll()
         do {
-            let journalMOs = try managedObjectContext.fetch(JournalMO.fetchRequest())
-            for journalMO in journalMOs {
-                let journal = Journal(id: journalMO.wrappedId, content: journalMO.wrappedContent, timestamp: journalMO.wrappedTimestamp, images: journalMO.wrappedImages, audio: journalMO.wrappedAudio, video: journalMO.wrappedVideo, location: journalMO.wrappedLocation, mood: journalMO.wrappedMood)
-                self.journals.append(journal)
-            }
+            journals = try managedObjectContext.fetch(JournalMO.fetchRequest())
+//            journalMOs[0]
+//            for journalMO in journalMOs {
+//                let journal = Journal(id: journalMO.wrappedId, content: journalMO.wrappedContent, timestamp: journalMO.wrappedTimestamp, images: journalMO.wrappedImages, audio: journalMO.wrappedAudio, video: journalMO.wrappedVideo, location: journalMO.wrappedLocation, mood: journalMO.wrappedMood)
+//                self.journals.append(journal)
+//            }
         } catch {
             print("Fetch Error: \(error.localizedDescription)")
         }
@@ -85,13 +87,25 @@ class JournalViewModel: ObservableObject {
     }
     
     func deleteAll() {
-        if let journalMOs = try? managedObjectContext.fetch(JournalMO.fetchRequest()) {
-            for mo in journalMOs {
+//        if let journalMOs = try? managedObjectContext.fetch(JournalMO.fetchRequest()) {
+            for mo in journals {
                 managedObjectContext.delete(mo)
             }
             try? managedObjectContext.save()
-        }
+//        }
         getJournals()
     }
     
+    
+    
 }
+
+//extension Optional {
+//    
+//    func ??<T>(lhs: Binding<Optional<T>>, rhs: T) -> Binding<T> {
+//        Binding(
+//            get: { lhs.wrappedValue ?? rhs },
+//            set: { lhs.wrappedValue = $0 }
+//        )
+//    }
+//}

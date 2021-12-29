@@ -11,6 +11,9 @@
 		A082353D27798A94006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082353C27798A94006B9FAE /* MoodMO+CoreDataProperties.swift */; };
 		A082353F27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082353E27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift */; };
 		A0823541277A314B006B9FAE /* JournalCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823540277A314B006B9FAE /* JournalCardView.swift */; };
+		A0823563277B140F006B9FAE /* AddJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823562277B140F006B9FAE /* AddJournalView.swift */; };
+		A0823565277B2525006B9FAE /* OptionalBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823564277B2525006B9FAE /* OptionalBinding.swift */; };
+		A0823567277B7704006B9FAE /* LegacyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823566277B7704006B9FAE /* LegacyTextView.swift */; };
 		A09D7A4C2778687900D11842 /* EtchedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A4B2778687900D11842 /* EtchedApp.swift */; };
 		A09D7A4E2778687900D11842 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A4D2778687900D11842 /* ContentView.swift */; };
 		A09D7A502778687B00D11842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09D7A4F2778687B00D11842 /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 		A082353C27798A94006B9FAE /* MoodMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoodMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A082353E27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoodMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A0823540277A314B006B9FAE /* JournalCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalCardView.swift; sourceTree = "<group>"; };
+		A0823562277B140F006B9FAE /* AddJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournalView.swift; sourceTree = "<group>"; };
+		A0823564277B2525006B9FAE /* OptionalBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBinding.swift; sourceTree = "<group>"; };
+		A0823566277B7704006B9FAE /* LegacyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTextView.swift; sourceTree = "<group>"; };
 		A09D7A482778687900D11842 /* Etched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etched.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09D7A4B2778687900D11842 /* EtchedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtchedApp.swift; sourceTree = "<group>"; };
 		A09D7A4D2778687900D11842 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,9 +142,12 @@
 				A09D7A672778B34500D11842 /* JournalListView.swift */,
 				A09D7A692778C25B00D11842 /* Journal.swift */,
 				A09D7A6B2778CEE700D11842 /* JournalViewModel.swift */,
+				A0823564277B2525006B9FAE /* OptionalBinding.swift */,
 				A09D7A702778D41D00D11842 /* JournalMO.xcdatamodeld */,
 				A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */,
 				A0823540277A314B006B9FAE /* JournalCardView.swift */,
+				A0823562277B140F006B9FAE /* AddJournalView.swift */,
+				A0823566277B7704006B9FAE /* LegacyTextView.swift */,
 			);
 			path = Journal;
 			sourceTree = "<group>";
@@ -214,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A082353F27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */,
+				A0823565277B2525006B9FAE /* OptionalBinding.swift in Sources */,
 				A082353D27798A94006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */,
 				A09D7A7B2778DF1F00D11842 /* MoodMO+CoreDataClass.swift in Sources */,
 				A09D7A6C2778CEE700D11842 /* JournalViewModel.swift in Sources */,
@@ -224,11 +234,13 @@
 				A09D7A4E2778687900D11842 /* ContentView.swift in Sources */,
 				A09D7A722778D41D00D11842 /* JournalMO.xcdatamodeld in Sources */,
 				A09D7A612778726B00D11842 /* ViewRouter.swift in Sources */,
+				A0823567277B7704006B9FAE /* LegacyTextView.swift in Sources */,
 				A09D7A64277893B600D11842 /* MainTabView.swift in Sources */,
 				A09D7A66277896B200D11842 /* MainTabPage.swift in Sources */,
 				A09D7A7D2778DF1F00D11842 /* JournalMO+CoreDataClass.swift in Sources */,
 				A09D7A682778B34500D11842 /* JournalListView.swift in Sources */,
 				A09D7A802778E6C700D11842 /* CoreDataHelper.swift in Sources */,
+				A0823563277B140F006B9FAE /* AddJournalView.swift in Sources */,
 				A09D7A5D277869A000D11842 /* OnboardingPageView.swift in Sources */,
 				A09D7A4C2778687900D11842 /* EtchedApp.swift in Sources */,
 				A09D7A7E2778DF1F00D11842 /* JournalMO+CoreDataProperties.swift in Sources */,
@@ -373,6 +385,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -402,6 +415,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

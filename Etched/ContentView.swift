@@ -9,19 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject private var viewRouter: ViewRouter
+    @ObservedObject var journalViewModel = JournalViewModel()
     
     var body: some View {
         if viewRouter.isNewUser {
             OnboardingView()
         } else {
             MainTabView()
+                .environmentObject(journalViewModel)
         }
-//        switch viewRouter.currentView {
-//        case .onboarding:
-//            OnboardingView()
-//        case .main:
-//            Text("Main")
-//        }
     }
 }
 

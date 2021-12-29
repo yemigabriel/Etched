@@ -9,32 +9,32 @@ import SwiftUI
 
 
 struct JournalCardView: View {
-    let journal: Journal
+    let journal: JournalMO
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(journal.formattedDate)
+            Text(journal.wrappedTimestamp.formattedShortDate())
                 .font(.headline)
                 .kerning(2.5)
             
             ZStack(alignment: .topTrailing) {
                 VStack(alignment: .trailing) {
                     HStack{
-                        Text("\(journal.content)")
-                            .foregroundColor(.black.opacity(0.7))
+                        Text("\(journal.wrappedContent)")
+                            .foregroundColor(Color.primary)//(UIColor.primary).opacity(0.7))
                             .kerning(2.5)
                             .lineLimit(4)
                             .frame(minHeight: 50)
                         
-                        Spacer(minLength: (journal.images?.count ?? 0) > 0 ? 50 : 0)
+                        Spacer(minLength: journal.wrappedImages.count > 0 ? 50 : 0)
                     }
                     
                     HStack {
-                        if let mood = journal.mood {
+                        if let mood = journal.wrappedMood {
                             Text(mood.emoji ?? "")
                         }
                         Spacer()
-                        if let location = journal.location {
+                        if let location = journal.wrappedLocation {
                             Image(systemName: "mappin.and.ellipse")
                             Text(location.name ?? "")
                                 .font(.caption2)
@@ -48,13 +48,13 @@ struct JournalCardView: View {
                 
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(.white)
+                .background(Color(UIColor.systemGroupedBackground))
                 .cornerRadius(10)
                 .shadow(color: Color.purple.opacity(0.2), radius: 10, x: 5, y: 5)
                 
                 
                 if (journal.images?.count ?? 0) > 0 {
-                    Image(journal.images![0])
+                    Image(journal.wrappedImages[0])
                         .resizable()
                         .scaledToFill()
                         .frame(width: 75, height: 75)
@@ -69,8 +69,8 @@ struct JournalCardView: View {
     }
 }
 
-struct JournalCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        JournalCardView(journal: Journal.sampleJournals[0])
-    }
-}
+//struct JournalCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        JournalCardView(journal: Journal.sampleJournals[0])
+//    }
+//}

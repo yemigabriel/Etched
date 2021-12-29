@@ -61,7 +61,7 @@ struct OnboardingButtonStyle<T: Shape>: ViewModifier {
             .font(.headline)
             .foregroundColor(.purple)
             .padding()
-            .background(.white)
+            .background(Color.white)
             .clipShape(shape)
     }
 }

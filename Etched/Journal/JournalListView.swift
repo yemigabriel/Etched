@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct JournalListView: View {
-    @ObservedObject var journalViewModel = JournalViewModel()
+    @EnvironmentObject private var journalViewModel: JournalViewModel
+    
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(journalViewModel.journals, id: \.id) { journal in
-                    JournalCardView(journal: journal)
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color.clear)
+                    if journal.id != nil {
+                        JournalCardView(journal: journal)
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
+                    }
                 }
+//                .onDelete(perform: deleteJournal)
                 
             }
             .navigationTitle("Home")
@@ -44,6 +48,12 @@ struct JournalListView: View {
             .background(Color(UIColor.systemGray5))
         }
         
+    }
+    
+    func deleteJournal(at offsets: IndexSet) {
+        for offset in offsets {
+//            journalViewModel.delete(journal: journalViewModel.journals[offset])
+        }
     }
     
 }

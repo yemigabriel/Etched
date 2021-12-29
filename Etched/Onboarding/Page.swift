@@ -15,8 +15,8 @@ struct Page {
     let background: Color
     
     static let pages = [
-        Page(id: UUID(), description: "Write daily journal", imageName: "page-1", background: .indigo),
-        Page(id: UUID(), description: "Lock securely", imageName: "page-2", background: .orange),
-        Page(id: UUID(), description: "Backup so you never lose anything", imageName: "page-3", background: .purple),
+        Page(id: UUID(), description: "Write daily journal", imageName: "page-1", background: Color.green),
+        Page(id: UUID(), description: "Lock securely", imageName: "page-2", background: Color.orange),
+        Page(id: UUID(), description: "Backup so you never lose anything", imageName: "page-3", background: Color.purple),
     ]
 }
