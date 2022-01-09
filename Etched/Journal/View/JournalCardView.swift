@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct JournalCardView: View {
-    let journal: JournalMO
+    @ObservedObject var journal: JournalMO
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -54,7 +54,23 @@ struct JournalCardView: View {
                 
                 
                 if (journal.images?.count ?? 0) > 0 {
-                    Image(journal.wrappedImages[0])
+//                    Image(uiImage: UIImage(contentsOfFile: FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0]).path) ?? "")
+//                    let imageUrl = FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0])
+                    Image(uiImage: UIImage(contentsOfFile: journal.wrappedSavedImages[0])! )
+//                    AsyncImage(url: FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0])) { image in
+//                        image
+//                            .resizable()
+//                            .scaledToFill()
+//                    } placeholder: {
+//                        ProgressView()
+//                    }
+//                    .frame(width: 75, height: 75)
+//                    .background(Color.purple)
+//                    .cornerRadius(10)
+//                    .offset(x: 20, y: -20)
+
+                    
+//                    Image(journal.wrappedImages[0])
                         .resizable()
                         .scaledToFill()
                         .frame(width: 75, height: 75)
@@ -65,7 +81,11 @@ struct JournalCardView: View {
                 
             }
         }
+        .onAppear(perform: {
+            print(journal.wrappedContent, journal.images)
+        })
         .padding(.vertical)
+        
     }
 }
 

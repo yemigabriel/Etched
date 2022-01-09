@@ -31,6 +31,7 @@ extension MoodMO {
     var wrappedEmoji: String {
         emoji ?? ""
     }
+    
 }
 
 // MARK: Generated accessors for journals

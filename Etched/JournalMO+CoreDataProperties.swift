@@ -30,7 +30,7 @@ extension JournalMO {
     }
     
     var wrappedContent: String {
-        content ?? "unknown content"
+        content?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
     }
     
     var wrappedTimestamp: Date {
@@ -43,6 +43,15 @@ extension JournalMO {
             for subString in images.split(separator: ",") {
                 imagesArray.append(String(subString))
             }
+        }
+        return imagesArray
+    }
+    
+    var wrappedSavedImages: [String] {
+        let savedImagePath = FileManager.default.getSavedImagesFolder()
+        var imagesArray:[String] = []
+        for image in wrappedImages {
+            imagesArray.append(savedImagePath.appendingPathComponent(image).path)
         }
         return imagesArray
     }

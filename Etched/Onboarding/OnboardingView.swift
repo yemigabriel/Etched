@@ -66,8 +66,3 @@ struct OnboardingButtonStyle<T: Shape>: ViewModifier {
     }
 }
 
-extension View {
-    func onboardingButtonStyle<T>(shape: T) -> some View where T: Shape{
-        modifier(OnboardingButtonStyle(shape: shape))
-    }
-}

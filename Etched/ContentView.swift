@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject private var viewRouter: ViewRouter
-    @ObservedObject var journalViewModel = JournalViewModel()
+    @ObservedObject var journalViewModel = JournalListViewModel()
     
     var body: some View {
         if viewRouter.isNewUser {
