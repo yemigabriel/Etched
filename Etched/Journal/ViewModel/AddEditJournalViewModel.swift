@@ -20,6 +20,8 @@ class AddEditJournalViewModel: ObservableObject {
     @Published var showMoodAlert = false
     @Published var showLocation = false
     @Published var showImagePicker = false
+    @Published var isCamera = false
+    @Published var isPhotoLibrary = false
     
     
     private var cancellable: AnyCancellable?
@@ -41,19 +43,7 @@ class AddEditJournalViewModel: ObservableObject {
             }
         })
     }
-    
-//    init(journalPublisher: AnyPublisher<JournalMO, Never> =
-//         CoreDataHelper.shared.journal.eraseToAnyPublisher()) {
-//
-//        cancellable = journalPublisher.sink(receiveValue: { journals in
-//            print("UPDATED JOURNAL COUNT: \(journals.count)")
-//            DispatchQueue.main.async {
-//                self.journals = journals
-//            }
-//        })
-//    }
-    
-    
+
     func add() {
         if journal.id == nil {
             coreDataHelper.add(journal: journal)

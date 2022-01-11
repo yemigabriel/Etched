@@ -10,30 +10,22 @@ import AVFoundation
 import Combine
 
 struct JournalListView: View {
-    @StateObject var journalViewModel = JournalListViewModel()
-    @State var selectedIndex = 0
-    @State var showingEditView = false
-    @State var selectedJournal: JournalMO?
-    @State var isDetailView = true
-    @State var showDeleteAlert = false
+    @StateObject var viewModel = JournalListViewModel()
     
     var body: some View {
         NavigationView {
             List {
                 //use enumerated to get index as well as the journal
-                ForEach(journalViewModel.journals, id: \.wrappedId) { journal in
+                ForEach(viewModel.journals, id: \.wrappedId) { journal in
                     if journal.id != nil {
                         JournalCardView(journal: journal)
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color.clear)
-//                            .onTapGesture {
-//                                selectedJournal = journal
-//                            }
                             .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                 Button(role: .destructive) {
-                                    if let offset = journalViewModel.journals.firstIndex(where: {$0 == journal}) {
-                                        selectedIndex = offset
-                                        showDeleteAlert = true
+                                    if let offset = viewModel.journals.firstIndex(where: {$0 == journal}) {
+                                        viewModel.selectedIndex = offset
+                                        viewModel.showDeleteAlert = true
                                     }
                                 } label: {
                                     Label("Delete", systemImage: "trash")
@@ -42,7 +34,7 @@ struct JournalListView: View {
                             }
                             .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                 Button {
-                                    selectedJournal = journal
+                                    viewModel.selectedJournal = journal
                                 } label: {
                                     Label("Edit", systemImage: "square.and.pencil")
                                 }
@@ -53,7 +45,6 @@ struct JournalListView: View {
                             )
                     }
                 }
-                
             }
             
             .navigationTitle("Home")
@@ -61,21 +52,21 @@ struct JournalListView: View {
                 UITableView.appearance().backgroundColor = UIColor.clear
             }
             .background(Color(UIColor.systemGray5))
-            .onChange(of: selectedJournal, perform: { _ in
-                if selectedJournal != nil {
-                    showingEditView = true
+            .onChange(of: viewModel.selectedJournal, perform: { _ in
+                if viewModel.selectedJournal != nil {
+                    viewModel.showingEditView = true
                 }
             })
-            .sheet(isPresented: $showingEditView, onDismiss: {
-                selectedJournal = nil //reset to previous
+            .sheet(isPresented: $viewModel.showingEditView, onDismiss: {
+                viewModel.selectedJournal = nil //reset to previous
             }, content: {
-                if let selectedJournal = selectedJournal {
+                if let selectedJournal = viewModel.selectedJournal {
                     AddJournalView(viewModel: AddEditJournalViewModel(), selectedJournal: selectedJournal)
                 }
             })
-            .alert("Are you sure you want to delete this journal?", isPresented: $showDeleteAlert) {
+            .alert("Are you sure you want to delete this journal?", isPresented: $viewModel.showDeleteAlert) {
                 Button("Delete", role: .destructive) {
-                    journalViewModel.delete(journal: journalViewModel.journals[selectedIndex])
+                    viewModel.delete()
                 }
             }
             

@@ -14,12 +14,6 @@ struct AddJournalView: View {
     
     @Environment(\.dismiss) var dismiss
     
-//    init(viewModel: AddEditJournalViewModel = AddEditJournalViewModel()) {
-//        print("viewModel init begins")
-//        self.viewModel = viewModel
-//        print("viewModel init ends")
-//    }
-    
     let gridColumns = [
         GridItem(.adaptive(minimum: 100))
         ]
@@ -72,8 +66,6 @@ struct AddJournalView: View {
                                     }
                                 }
                                 ToolbarItem(placement: .navigationBarTrailing) {
-//                                    if viewModel.journal.id == nil
-//                                    {
                                         Button {
                                             viewModel.add() // Merge policy makes edit possible even with this method
                                             dismiss()
@@ -82,7 +74,6 @@ struct AddJournalView: View {
                                                 .fontWeight(.bold)
                                         }
                                         .disabled(viewModel.journal.wrappedContent.isEmpty)
-//                                    }
                                 }
                             }
                             .onChange(of: viewModel.journal.wrappedContent) { vm in
@@ -90,7 +81,7 @@ struct AddJournalView: View {
                             }
                             .onAppear(perform: {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.7 ) {
-                                    isInputActive = viewModel.isInputActive //@FocusState from VM
+//                                    isInputActive = viewModel.isInputActive //@FocusState from VM
                                     isInputActive = true
                                     if let selectedJournal = selectedJournal {
                                         viewModel.journal = selectedJournal
@@ -108,12 +99,9 @@ struct AddJournalView: View {
                             .font(.title2)
                             .padding(.all, 8)
                             .opacity(0)
-////                            .onTapGesture {
-////                                self.viewModel.clearPlaceholder()
-////                            }
                         }
                     }
-//                }
+                
                 if viewModel.showMoodAlert {
                     Color.black
                         .ignoresSafeArea()
@@ -148,8 +136,18 @@ struct AddJournalView: View {
                 }
                 
             }
-            .sheet(isPresented: $viewModel.showImagePicker) {
-                ImagePickerController(image: $inputImage, imagePath: $inputImagePath)
+            .confirmationDialog("Add a photo", isPresented: $viewModel.showImagePicker) {
+                Button("Camera") { viewModel.isCamera.toggle() }
+                Button("Photo Library") { viewModel.isPhotoLibrary.toggle() }
+                Button("Cancel", role: .cancel) {}
+            } message: {
+                Text("Add a photo")
+            }
+            .sheet(isPresented: $viewModel.isCamera) {
+                ImagePickerController(image: $inputImage, imageUrlPath: $inputImagePath, isShown: $viewModel.isCamera, sourceType: .camera)
+            }
+            .sheet(isPresented: $viewModel.isPhotoLibrary) {
+                PhotoPickerController(image: $inputImage, imagePath: $inputImagePath)
             }
             .onDisappear {
                 viewModel.dismissSheet()

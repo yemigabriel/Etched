@@ -56,7 +56,9 @@ struct JournalCardView: View {
                 if (journal.images?.count ?? 0) > 0 {
 //                    Image(uiImage: UIImage(contentsOfFile: FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0]).path) ?? "")
 //                    let imageUrl = FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0])
-                    Image(uiImage: UIImage(contentsOfFile: journal.wrappedSavedImages[0])! )
+                    if let image = UIImage(contentsOfFile: journal.wrappedSavedImages[0]) {
+                        Image(uiImage: image)
+                    
 //                    AsyncImage(url: FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0])) { image in
 //                        image
 //                            .resizable()
@@ -77,6 +79,7 @@ struct JournalCardView: View {
                         .background(Color.purple)
                         .cornerRadius(10)
                         .offset(x: 20, y: -20)
+                    }
                 }
                 
             }

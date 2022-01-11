@@ -17,26 +17,35 @@ struct JournalDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                image?
-                    .resizable()
-                    .scaledToFill()
-                    .frame(maxWidth: .infinity, maxHeight: 250)
-                
-                
+//                ZStack {
+                    image?
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: UIScreen.screenWidth, height: image == nil ? 0 : 250)
+                        .clipped()
+//                    Color(uiColor: .systemBackground)
+//                        .opacity(0.5)
+//                }
+//                .frame(width: UIScreen.screenWidth, height: image == nil ? 0 : 250)
+
+
                 Text(viewModel.journal.wrappedContent)
                     .font(.title3)
                     .kerning(1.5)
                     .frame(maxWidth:.infinity, alignment: .leading)
                     .multilineTextAlignment(.leading)
                     .lineSpacing(2)
+                    .padding()
+//                    .background(.clear)
             }
-//            .frame(maxWidth: .infinity)
-            .padding()
         }
         .frame(maxWidth: .infinity)
         .navigationBarTitle(viewModel.journal.wrappedTimestamp.formattedShortDate())
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
+                if viewModel.journal.mood != nil {
+                    Button(viewModel.journal.mood!.emoji!) {}
+                }
                 Button {
                     showingEditView = true
                 } label: {
@@ -46,7 +55,9 @@ struct JournalDetailView: View {
             }
         }
         .sheet(isPresented: $showingEditView, onDismiss: {
-            print("dismissed... here in detail view")
+            if let journalImage = UIImage.loadFirst(from: viewModel.journal.wrappedSavedImages) {
+                image = Image(uiImage: journalImage)
+            }
         }, content: {
             AddJournalView(viewModel: AddEditJournalViewModel(), selectedJournal: viewModel.journal)
         })
@@ -55,6 +66,7 @@ struct JournalDetailView: View {
                 image = Image(uiImage: journalImage)
             }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

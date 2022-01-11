@@ -42,7 +42,8 @@
 		A09FE8CE278AB46E00A044D2 /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8CD278AB46E00A044D2 /* JournalDetailView.swift */; };
 		A09FE8D0278AE65C00A044D2 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8CF278AE65C00A044D2 /* UIImage+Extension.swift */; };
 		A09FE8D2278AEC4900A044D2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8D1278AEC4900A044D2 /* DetailViewModel.swift */; };
-		A0A12ECE27866E7600945E6F /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A12ECD27866E7600945E6F /* ImagePickerController.swift */; };
+		A09FE8D4278C3BF700A044D2 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8D3278C3BF700A044D2 /* ImagePickerController.swift */; };
+		A0A12ECE27866E7600945E6F /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A12ECD27866E7600945E6F /* PhotoPickerController.swift */; };
 		A0AD0B48277CDCBB006EE7F7 /* EtchedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD0B47277CDCBB006EE7F7 /* EtchedTests.swift */; };
 		A0AD0B4F277CF0E4006EE7F7 /* JournalViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD0B4E277CF0E4006EE7F7 /* JournalViewModelTests.swift */; };
 		A0C4CCE2278420650079B525 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C4CCE1278420650079B525 /* String+Extension.swift */; };
@@ -89,13 +90,15 @@
 		A09D7A772778DF1F00D11842 /* JournalMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalMO+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A09D7A782778DF1F00D11842 /* JournalMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		A09E4C05278D976B00EC2552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A09FE8C327897FCA00A044D2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8C527897FDB00A044D2 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8C727897FEA00A044D2 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8CD278AB46E00A044D2 /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 		A09FE8CF278AE65C00A044D2 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8D1278AEC4900A044D2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		A0A12ECD27866E7600945E6F /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		A09FE8D3278C3BF700A044D2 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		A0A12ECD27866E7600945E6F /* PhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
 		A0AD0B45277CDCBB006EE7F7 /* EtchedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtchedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AD0B47277CDCBB006EE7F7 /* EtchedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtchedTests.swift; sourceTree = "<group>"; };
 		A0AD0B4E277CF0E4006EE7F7 /* JournalViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModelTests.swift; sourceTree = "<group>"; };
@@ -141,6 +144,7 @@
 		A09D7A4A2778687900D11842 /* Etched */ = {
 			isa = PBXGroup;
 			children = (
+				A09E4C05278D976B00EC2552 /* Info.plist */,
 				A09FE8CC278AB3CB00A044D2 /* Managers */,
 				A09FE8C227897FAF00A044D2 /* Extensions */,
 				A09D7A732778DF1F00D11842 /* LocationMO+CoreDataClass.swift */,
@@ -228,11 +232,12 @@
 		A09FE8CB278AB31D00A044D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A0A12ECD27866E7600945E6F /* ImagePickerController.swift */,
+				A0A12ECD27866E7600945E6F /* PhotoPickerController.swift */,
 				A09D7A672778B34500D11842 /* JournalListView.swift */,
 				A0823540277A314B006B9FAE /* JournalCardView.swift */,
 				A0823562277B140F006B9FAE /* AddJournalView.swift */,
 				A09FE8CD278AB46E00A044D2 /* JournalDetailView.swift */,
+				A09FE8D3278C3BF700A044D2 /* ImagePickerController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,7 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0A12ECE27866E7600945E6F /* ImagePickerController.swift in Sources */,
+				A0A12ECE27866E7600945E6F /* PhotoPickerController.swift in Sources */,
 				A0C4CCE2278420650079B525 /* String+Extension.swift in Sources */,
 				A082353F27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */,
 				A0823565277B2525006B9FAE /* OptionalBinding.swift in Sources */,
@@ -374,6 +379,7 @@
 				A0823567277B7704006B9FAE /* LegacyTextView.swift in Sources */,
 				A09D7A64277893B600D11842 /* MainTabView.swift in Sources */,
 				A09D7A66277896B200D11842 /* MainTabPage.swift in Sources */,
+				A09FE8D4278C3BF700A044D2 /* ImagePickerController.swift in Sources */,
 				A09D7A7D2778DF1F00D11842 /* JournalMO+CoreDataClass.swift in Sources */,
 				A09FE8C627897FDB00A044D2 /* View+Extension.swift in Sources */,
 				A09D7A682778B34500D11842 /* JournalListView.swift in Sources */,
@@ -464,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -519,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -540,7 +546,9 @@
 				DEVELOPMENT_TEAM = 2EYKMSN9F8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Add photos to your journal";
+				INFOPLIST_FILE = Etched/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Capture moments in your journal";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Capture moments in your journal";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -571,7 +579,9 @@
 				DEVELOPMENT_TEAM = 2EYKMSN9F8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Add photos to your journal";
+				INFOPLIST_FILE = Etched/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Capture moments in your journal";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Capture moments in your journal";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

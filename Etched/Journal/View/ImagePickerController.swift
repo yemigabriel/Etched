@@ -2,114 +2,67 @@
 //  ImagePickerController.swift
 //  Etched
 //
-//  Created by Yemi Gabriel on 1/6/22.
+//  Created by Yemi Gabriel on 1/10/22.
 //
 
+import Foundation
 import SwiftUI
-import PhotosUI
 
 struct ImagePickerController: UIViewControllerRepresentable {
+    
     @Binding var image: UIImage?
-    @Binding var imagePath: String?
+    @Binding var imageUrlPath: String?
+    @Binding var isShown: Bool
     
+    let sourceType: UIImagePickerController.SourceType
     
-    class Coordinator: NSObject, PHPickerViewControllerDelegate {
-        
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         var parent: ImagePickerController
         
         init(_ parent: ImagePickerController) {
             self.parent = parent
         }
         
-        
-        
-        func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-            picker.dismiss(animated: true, completion: nil)
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return }
+            guard let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as? URL  else { return }
             
-            guard let provider = results.first?.itemProvider else { return }
+            let savedImagesFolder = FileManager.default.getSavedImagesFolder()
+            let savedImagePath = savedImagesFolder.appendingPathComponent("\(Date.fileNameByTimestamp()).jpg")
             
-            if provider.canLoadObject(ofClass: UIImage.self) {
-                provider.loadObject(ofClass: UIImage.self) { image, error in
-                    guard let image = image as? UIImage else { return }
-                    guard let data = image.jpegData(compressionQuality: 0.8) else { return }
-                    
-                    let savedImagesFolder = FileManager.default.getSavedImagesFolder()
-                    let imagePath = savedImagesFolder.appendingPathComponent(Date.fileNameByTimestamp())
-                    
-                    do {
-                        try data.write(to: imagePath, options: .completeFileProtection)
-                        DispatchQueue.main.async { [weak self] in
-                            self?.parent.image = image
-                            self?.parent.imagePath = "\(imagePath.lastPathComponent).jpg"
-                            print(imagePath.pathComponents)
-                            print(self?.parent.imagePath)
-                        }
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                    
-                }
+            do {
+                try FileManager.default.copyItem(at: imageUrl, to: savedImagePath)
+                parent.imageUrlPath = savedImagePath.lastPathComponent
+                print(parent.imageUrlPath)
+                parent.image = image
+            } catch {
+                print(error.localizedDescription)
             }
             
-//            if let imgUrl = info[UIImagePickerControllerImageURL] as? URL{
-//                   let imgName = imgUrl.lastPathComponent
-//                   let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-//                   let localPath = documentDirectory?.appending(imgName)
-//
-//                   let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-//                   let data = UIImagePNGRepresentation(image)! as NSData
-//                   data.write(toFile: localPath!, atomically: true)
-//                   //let imageData = NSData(contentsOfFile: localPath!)!
-//                   let photoURL = URL.init(fileURLWithPath: localPath!)//NSURL(fileURLWithPath: localPath!)
-//                   print(photoURL)
-//
-//               }
-//
-//            let imageURL = info[UIImagePickerControllerReferenceURL] as NSURL
-//                let imageName = imageURL.path!.lastPathComponent
-//                let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first as String
-//                let localPath = documentDirectory.stringByAppendingPathComponent(imageName)
-//
-//                let image = info[UIImagePickerControllerOriginalImage] as UIImage
-//                let data = UIImagePNGRepresentation(image)
-//                data.writeToFile(localPath, atomically: true)
-//
-//                let imageData = NSData(contentsOfFile: localPath)!
-//                let photoURL = NSURL(fileURLWithPath: localPath)
-//                let imageWithData = UIImage(data: imageData)!
-
+            parent.isShown = false
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            parent.isShown = false
         }
         
     }
     
-//    func makeUIViewController(context: Context) -> PHPickerViewController {
-//        var config = PHPickerConfiguration()
-//        config.filter = .images
-//
-//        let picker = PHPickerViewController(configuration: config)
-//        picker.delegate = context.coordinator
-//        return picker
-//    }
-//
-//    func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {
-//
-//    }
-    
-    func makeUIViewController(context: Context) -> PHPickerViewController {
-        var config = PHPickerConfiguration()
-        config.filter = .images
-        let picker = PHPickerViewController(configuration: config)
+    func makeUIViewController(context: Context) -> UIImagePickerController {
+        let picker = UIImagePickerController()
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            picker.sourceType = sourceType
+        }
         picker.delegate = context.coordinator
         return picker
     }
     
-    func updateUIViewController(_ uiViewController: PHPickerViewController, context: Context) {
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
         
     }
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-    
     
 }
