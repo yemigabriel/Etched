@@ -17,18 +17,26 @@ struct JournalDetailView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-//                ZStack {
-                    image?
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: UIScreen.screenWidth, height: image == nil ? 0 : 250)
-                        .clipped()
-//                    Color(uiColor: .systemBackground)
-//                        .opacity(0.5)
-//                }
-//                .frame(width: UIScreen.screenWidth, height: image == nil ? 0 : 250)
-
-
+                image?
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: UIScreen.screenWidth, height: image == nil ? 0 : 250)
+                    .clipped()
+                
+                if let location = viewModel.journal.location {
+                    HStack() {
+                        Spacer(minLength: 100)
+                        Image(systemName: "mappin.and.ellipse")
+                        Text(location.wrappedName)
+                            .font(.caption2)
+                            .kerning(2.5)
+                            .textCase(.uppercase)
+                            .lineLimit(2)
+                    }
+                    .padding(.top, 20)
+                    .padding(.horizontal)
+                    .opacity(0.5)
+                }
                 Text(viewModel.journal.wrappedContent)
                     .font(.title3)
                     .kerning(1.5)

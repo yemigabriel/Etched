@@ -56,13 +56,6 @@ struct Journal: Identifiable, Codable {
     ]
 }
 
-struct Location: Identifiable, Codable {
-    var id: UUID?
-    var name: String?
-    var latitude: Double?
-    var longitude: Double?
-}
-
 struct Mood: Identifiable, Codable {
     var id: UUID
     var name: String

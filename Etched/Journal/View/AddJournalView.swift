@@ -42,6 +42,21 @@ struct AddJournalView: View {
                             }
                         }
                         
+                        if let location = viewModel.journal.location {
+                            HStack() {
+                                Spacer(minLength: 100)
+                                Image(systemName: "mappin.and.ellipse")
+                                Text(location.wrappedName)
+                                    .font(.caption2)
+                                    .kerning(2.5)
+                                    .textCase(.uppercase)
+                                    .lineLimit(2)
+                            }
+                            .padding(.top, 20)
+                            .padding(.horizontal)
+                            .opacity(0.5)
+                        }
+                        
                         ZStack {
                         TextEditor(text: $viewModel.journal.content ?? "")
                             .focused($isInputActive)
@@ -149,6 +164,9 @@ struct AddJournalView: View {
             .sheet(isPresented: $viewModel.isPhotoLibrary) {
                 PhotoPickerController(image: $inputImage, imagePath: $inputImagePath)
             }
+            .sheet(isPresented: $viewModel.showLocation) {
+                LocationView(journal: viewModel.journal)
+            }
             .onDisappear {
                 viewModel.dismissSheet()
             }
@@ -210,19 +228,6 @@ struct AddJournalView: View {
         image = Image(uiImage: inputImage)
     }
     
-    func addLocation() {
-        /***
-         1. Access user location
-         2. Save long and lat to core data
-         **/
-    }
-    
-    func addMood() {
-        /***
-         1. Open mood action sheet
-         2. on select, add mood to core data
-         **/
-    }
 }
 
 //struct AddJournalView_Previews: PreviewProvider {

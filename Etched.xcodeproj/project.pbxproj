@@ -16,6 +16,8 @@
 		A0823563277B140F006B9FAE /* AddJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823562277B140F006B9FAE /* AddJournalView.swift */; };
 		A0823565277B2525006B9FAE /* OptionalBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823564277B2525006B9FAE /* OptionalBinding.swift */; };
 		A0823567277B7704006B9FAE /* LegacyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823566277B7704006B9FAE /* LegacyTextView.swift */; };
+		A08937FB278E9CFC0049D720 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08937FA278E9CFC0049D720 /* Alert+Extension.swift */; };
+		A08937FE278F13CB0049D720 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08937FD278F13CB0049D720 /* Location.swift */; };
 		A09D7A4C2778687900D11842 /* EtchedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A4B2778687900D11842 /* EtchedApp.swift */; };
 		A09D7A4E2778687900D11842 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A4D2778687900D11842 /* ContentView.swift */; };
 		A09D7A502778687B00D11842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09D7A4F2778687B00D11842 /* Assets.xcassets */; };
@@ -36,6 +38,9 @@
 		A09D7A7D2778DF1F00D11842 /* JournalMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A772778DF1F00D11842 /* JournalMO+CoreDataClass.swift */; };
 		A09D7A7E2778DF1F00D11842 /* JournalMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A782778DF1F00D11842 /* JournalMO+CoreDataProperties.swift */; };
 		A09D7A802778E6C700D11842 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */; };
+		A09E4C07278DA02100EC2552 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E4C06278DA02100EC2552 /* LocationManager.swift */; };
+		A09E4C0C278DA6BF00EC2552 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E4C0B278DA6BF00EC2552 /* LocationViewModel.swift */; };
+		A09E4C0E278DA6CF00EC2552 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E4C0D278DA6CF00EC2552 /* LocationView.swift */; };
 		A09FE8C427897FCB00A044D2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8C327897FCA00A044D2 /* Date+Extension.swift */; };
 		A09FE8C627897FDB00A044D2 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8C527897FDB00A044D2 /* View+Extension.swift */; };
 		A09FE8C827897FEA00A044D2 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8C727897FEA00A044D2 /* FileManager+Extension.swift */; };
@@ -69,6 +74,8 @@
 		A0823562277B140F006B9FAE /* AddJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournalView.swift; sourceTree = "<group>"; };
 		A0823564277B2525006B9FAE /* OptionalBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBinding.swift; sourceTree = "<group>"; };
 		A0823566277B7704006B9FAE /* LegacyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTextView.swift; sourceTree = "<group>"; };
+		A08937FA278E9CFC0049D720 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
+		A08937FD278F13CB0049D720 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A09D7A482778687900D11842 /* Etched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etched.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09D7A4B2778687900D11842 /* EtchedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtchedApp.swift; sourceTree = "<group>"; };
 		A09D7A4D2778687900D11842 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +98,9 @@
 		A09D7A782778DF1F00D11842 /* JournalMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JournalMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		A09E4C05278D976B00EC2552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A09E4C06278DA02100EC2552 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A09E4C0B278DA6BF00EC2552 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
+		A09E4C0D278DA6CF00EC2552 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		A09FE8C327897FCA00A044D2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8C527897FDB00A044D2 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8C727897FEA00A044D2 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
@@ -123,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A08937FC278F13AB0049D720 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A08937FD278F13CB0049D720 /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A09D7A3F2778687900D11842 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +162,7 @@
 		A09D7A4A2778687900D11842 /* Etched */ = {
 			isa = PBXGroup;
 			children = (
+				A09E4C08278DA67400EC2552 /* Location */,
 				A09E4C05278D976B00EC2552 /* Info.plist */,
 				A09FE8CC278AB3CB00A044D2 /* Managers */,
 				A09FE8C227897FAF00A044D2 /* Extensions */,
@@ -199,6 +218,32 @@
 			path = Journal;
 			sourceTree = "<group>";
 		};
+		A09E4C08278DA67400EC2552 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				A08937FC278F13AB0049D720 /* Model */,
+				A09E4C0A278DA68E00EC2552 /* View */,
+				A09E4C09278DA68000EC2552 /* ViewModel */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		A09E4C09278DA68000EC2552 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A09E4C0B278DA6BF00EC2552 /* LocationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A09E4C0A278DA68E00EC2552 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A09E4C0D278DA6CF00EC2552 /* LocationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A09FE8C227897FAF00A044D2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +252,7 @@
 				A09FE8C527897FDB00A044D2 /* View+Extension.swift */,
 				A09FE8C727897FEA00A044D2 /* FileManager+Extension.swift */,
 				A09FE8CF278AE65C00A044D2 /* UIImage+Extension.swift */,
+				A08937FA278E9CFC0049D720 /* Alert+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -247,6 +293,7 @@
 			children = (
 				A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */,
 				A08206AD277DCB050036D8B9 /* PersistenceController.swift */,
+				A09E4C06278DA02100EC2552 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -363,6 +410,7 @@
 				A0A12ECE27866E7600945E6F /* PhotoPickerController.swift in Sources */,
 				A0C4CCE2278420650079B525 /* String+Extension.swift in Sources */,
 				A082353F27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */,
+				A09E4C0C278DA6BF00EC2552 /* LocationViewModel.swift in Sources */,
 				A0823565277B2525006B9FAE /* OptionalBinding.swift in Sources */,
 				A08206B0277DE1C10036D8B9 /* AddEditJournalViewModel.swift in Sources */,
 				A09FE8C427897FCB00A044D2 /* Date+Extension.swift in Sources */,
@@ -372,8 +420,10 @@
 				A09D7A5B2778698C00D11842 /* OnboardingView.swift in Sources */,
 				A09D7A6A2778C25B00D11842 /* Journal.swift in Sources */,
 				A09D7A5F277869C700D11842 /* Page.swift in Sources */,
+				A09E4C0E278DA6CF00EC2552 /* LocationView.swift in Sources */,
 				A082353B27798A88006B9FAE /* LocationMO+CoreDataProperties.swift in Sources */,
 				A09D7A4E2778687900D11842 /* ContentView.swift in Sources */,
+				A08937FB278E9CFC0049D720 /* Alert+Extension.swift in Sources */,
 				A09D7A722778D41D00D11842 /* JournalMO.xcdatamodeld in Sources */,
 				A09D7A612778726B00D11842 /* ViewRouter.swift in Sources */,
 				A0823567277B7704006B9FAE /* LegacyTextView.swift in Sources */,
@@ -394,8 +444,10 @@
 				A09FE8D0278AE65C00A044D2 /* UIImage+Extension.swift in Sources */,
 				A09D7A7A2778DF1F00D11842 /* LocationMO+CoreDataProperties.swift in Sources */,
 				A08206AE277DCB050036D8B9 /* PersistenceController.swift in Sources */,
+				A08937FE278F13CB0049D720 /* Location.swift in Sources */,
 				A0823541277A314B006B9FAE /* JournalCardView.swift in Sources */,
 				A09D7A792778DF1F00D11842 /* LocationMO+CoreDataClass.swift in Sources */,
+				A09E4C07278DA02100EC2552 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +600,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Etched/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Capture moments in your journal";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This lets you capture places in your journal entry";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Capture moments in your journal";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -581,6 +634,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Etched/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Capture moments in your journal";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This lets you capture places in your journal entry";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Capture moments in your journal";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

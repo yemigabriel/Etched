@@ -105,6 +105,10 @@ class AddEditJournalViewModel: ObservableObject {
         journal.images = path
     }
     
+    func addLocation() {
+        
+    }
+    
     
 }
 

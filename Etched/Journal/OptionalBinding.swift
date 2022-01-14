@@ -14,3 +14,9 @@ func ??<T>(lhs: Binding<Optional<T>>, rhs: T) -> Binding<T> {
     )
 }
 
+func !=<T>(lhs: Binding<Optional<T>>, rhs: Optional<T>) -> Binding<Bool> where T:Equatable {
+    Binding (
+        get: { lhs.wrappedValue != rhs },
+        set: { lhs.wrappedValue = $0 as? T ?? nil }
+        )
+}

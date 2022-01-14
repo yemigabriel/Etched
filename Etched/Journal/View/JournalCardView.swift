@@ -31,15 +31,18 @@ struct JournalCardView: View {
                     
                     HStack {
                         if let mood = journal.wrappedMood {
-                            Text(mood.emoji ?? "")
+                            Text(mood.emoji)
                         }
-                        Spacer()
-                        if let location = journal.wrappedLocation {
+                        
+                        Spacer(minLength: 100)
+                        
+                        if let location = journal.location {
                             Image(systemName: "mappin.and.ellipse")
-                            Text(location.name ?? "")
-                                .font(.caption2)
+                            Text(location.wrappedName)
+                                .font(.footnote)
                                 .kerning(2.5)
                                 .textCase(.uppercase)
+                                .lineLimit(2)
                         }
                     }
                     .foregroundColor(.secondary)
@@ -54,25 +57,8 @@ struct JournalCardView: View {
                 
                 
                 if (journal.images?.count ?? 0) > 0 {
-//                    Image(uiImage: UIImage(contentsOfFile: FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0]).path) ?? "")
-//                    let imageUrl = FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0])
                     if let image = UIImage(contentsOfFile: journal.wrappedSavedImages[0]) {
                         Image(uiImage: image)
-                    
-//                    AsyncImage(url: FileManager.default.getSavedImagesFolder().appendingPathComponent(journal.wrappedImages[0])) { image in
-//                        image
-//                            .resizable()
-//                            .scaledToFill()
-//                    } placeholder: {
-//                        ProgressView()
-//                    }
-//                    .frame(width: 75, height: 75)
-//                    .background(Color.purple)
-//                    .cornerRadius(10)
-//                    .offset(x: 20, y: -20)
-
-                    
-//                    Image(journal.wrappedImages[0])
                         .resizable()
                         .scaledToFill()
                         .frame(width: 75, height: 75)
