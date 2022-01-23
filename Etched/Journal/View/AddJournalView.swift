@@ -29,6 +29,7 @@ struct AddJournalView: View {
                     VStack(alignment: .leading) {
                         //check for add or edit situations
                         if inputImage != nil || viewModel.journal.wrappedSavedImages.isNotEmpty() {
+                            // MARK: multiple images - future release
                             ScrollView(.horizontal) {
                                 HStack {
                                     image?
@@ -41,7 +42,6 @@ struct AddJournalView: View {
                                 .padding(.horizontal, 20)
                             }
                         }
-                        
                         if let location = viewModel.journal.location {
                             HStack() {
                                 Spacer(minLength: 100)
@@ -69,6 +69,7 @@ struct AddJournalView: View {
                             .toolbar {
                                 ToolbarItemGroup(placement: .navigationBarLeading) {
                                     Button {
+                                        print("dismiss")
                                         dismiss()
                                     } label: {
                                         Label("Dismiss", systemImage: "xmark")
@@ -165,7 +166,7 @@ struct AddJournalView: View {
                 PhotoPickerController(image: $inputImage, imagePath: $inputImagePath)
             }
             .sheet(isPresented: $viewModel.showLocation) {
-                LocationView(journal: viewModel.journal)
+                AddPlaceView(journal: viewModel.journal)
             }
             .onDisappear {
                 viewModel.dismissSheet()

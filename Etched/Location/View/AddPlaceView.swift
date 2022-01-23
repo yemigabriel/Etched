@@ -8,14 +8,17 @@
 import SwiftUI
 import MapKit
 
-struct LocationView: View {
-    @StateObject private var viewModel = LocationViewModel()
+struct AddPlaceView: View {
+    @StateObject private var viewModel = AddPlaceViewModel()
     @State var journal: JournalMO?
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack(alignment: .top) {
-            Map(coordinateRegion: $viewModel.region, interactionModes: .all, showsUserLocation: true, annotationItems: viewModel.annotationItems) { location in
+            Map(coordinateRegion: $viewModel.region,
+                interactionModes: .all,
+                showsUserLocation: true,
+                annotationItems: viewModel.annotationItems) { location in
                 
                 MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
                     VStack {
@@ -62,6 +65,7 @@ struct LocationView: View {
                     }
                     
                 }
+            
             VStack(spacing: 0) {
                 HStack (spacing: 20){
                     Button {
@@ -74,13 +78,6 @@ struct LocationView: View {
                         .onChange(of: viewModel.searchText) { searchText in
                             viewModel.search()
                         }
-//                    Spacer()
-//                    Button {
-//                        dismiss()
-//                    } label: {
-//                        Text("Finish")
-//                            .font(.headline.bold())
-//                    }
                 }
                 .padding()
                 .frame(maxWidth: .infinity)
@@ -132,6 +129,6 @@ struct LocationView: View {
 
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationView()
+        AddPlaceView()
     }
 }

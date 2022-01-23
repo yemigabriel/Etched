@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+import CoreLocation
 
 extension LocationMO {
 
@@ -30,9 +30,16 @@ extension LocationMO {
         name ?? "Earth"
     }
     
-//    var wrappedJournals: [Journal] {
-//        
-//    }
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
+    var wrappedJournals: [JournalMO] {
+        guard let journals = journals?.allObjects as? [JournalMO] else {
+            return []
+        }
+        return journals
+    }
 
 }
 

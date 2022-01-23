@@ -8,7 +8,7 @@
 import Combine
 import MapKit
 
-class LocationViewModel: ObservableObject {
+class AddPlaceViewModel: ObservableObject {
     
     @Published var error: LocationError?
     @Published var currentLocation: Location?
@@ -22,7 +22,6 @@ class LocationViewModel: ObservableObject {
     // easier for testing
     init(locationPublisher: AnyPublisher<Location, LocationError> =
          LocationManager.shared.locationPublisher.eraseToAnyPublisher()) {
-        print("loc vm here")
         cancellable = locationPublisher.sink(receiveCompletion: { [self] (completion:
                                                                     Subscribers.Completion<LocationError>) in
             switch completion {
@@ -35,9 +34,8 @@ class LocationViewModel: ObservableObject {
                 print("error is nil... finished!")
             }
         }, receiveValue: { [self] location in
-            print(location.name)
             currentLocation = location
-            region.center = CLLocationCoordinate2D(latitude: location.latitude ?? 0, longitude: location.longitude ?? 0)
+            region.center = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
             annotationItems.removeAll()
             annotationItems.append(location)
         })

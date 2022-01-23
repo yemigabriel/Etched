@@ -5,7 +5,7 @@
 //  Created by Yemi Gabriel on 1/9/22.
 //
 
-import Foundation
+import SwiftUI
 
 class DetailViewModel: ObservableObject {
     @Published var journal: JournalMO
@@ -14,6 +14,9 @@ class DetailViewModel: ObservableObject {
         self.journal = journal
     }
     
+    func delete() {
+        CoreDataHelper.shared.delete(journal: journal)
+    }
     
     
 }

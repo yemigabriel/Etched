@@ -10,29 +10,30 @@ import SwiftUI
 struct MainTabView: View {
     @State private var currentPage = 0
     @State private var isAddJournalShowing = false
+    @Environment(\.dismiss) var dismiss
     
     
     var body: some View {
         ZStack (alignment: .bottom) {
             
             TabView(selection: $currentPage) {
-                JournalListView()
+                DashboardView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
-                Text("Timeline")
-                    .tabItem {
-                        Label("Timeline", systemImage: "calendar")
-                    }
+//                Text("Timeline")
+//                    .tabItem {
+//                        Label("Timeline", systemImage: "calendar")
+//                    }
                 Text("Add")
                     .tabItem {
                             Label("Add", systemImage: "plus")
                     }
                     .foregroundColor(.green)
-                Text("Stats")
-                    .tabItem {
-                        Label("Stats", systemImage: "chart.line.uptrend.xyaxis")
-                    }
+//                Text("Stats")
+//                    .tabItem {
+//                        Label("Stats", systemImage: "chart.line.uptrend.xyaxis")
+//                    }
                 Text("Settings")
                     .tabItem {
                         Label("Settings", systemImage: "gearshape")

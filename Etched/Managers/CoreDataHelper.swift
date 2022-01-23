@@ -23,7 +23,6 @@ class CoreDataHelper: NSObject, CoreDataHelperProtocol, ObservableObject {
     
     let container = PersistenceController.shared.container
     private(set) var journals = CurrentValueSubject<[JournalMO], Never>([])
-//    var journal = CurrentValueSubject<JournalMO, Never>(<#JournalMO#>)
     var journal = PassthroughSubject<JournalMO, Never>()
     private var journalFetchController: NSFetchedResultsController<JournalMO>?
     
@@ -52,7 +51,6 @@ extension CoreDataHelper: NSFetchedResultsControllerDelegate {
         do {
             try journalFetchController!.performFetch()
             journals.value = journalFetchController!.fetchedObjects ?? []
-            print(journals.count)
         } catch {
             print("Fetch error: \(error.localizedDescription)")
         }
@@ -126,3 +124,4 @@ extension CoreDataHelper: NSFetchedResultsControllerDelegate {
     }
     
 }
+

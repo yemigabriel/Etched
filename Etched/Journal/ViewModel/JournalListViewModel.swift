@@ -13,11 +13,11 @@ import Combine
 class JournalListViewModel: ObservableObject {
     
     @Published var journals = [JournalMO]()
-    @State var selectedIndex = 0
-    @State var showingEditView = false
-    @State var isDetailView = true
-    @State var showDeleteAlert = false
-    @State var selectedJournal: JournalMO?
+    @Published var selectedIndex = 0
+    @Published var showingEditView = false
+    @Published var isDetailView = true
+    @Published var showDeleteAlert = false
+    @Published var selectedJournal: JournalMO?
     
     private var cancellable: AnyCancellable?
     
@@ -26,7 +26,7 @@ class JournalListViewModel: ObservableObject {
         cancellable = journalPublisher.sink(receiveValue: { journals in
             print("UPDATED JOURNAL COUNT: \(journals.count)")
             DispatchQueue.main.async {
-                self.journals = journals
+                self.journals = journals.filter{$0.id != nil}
             }
         })
     }

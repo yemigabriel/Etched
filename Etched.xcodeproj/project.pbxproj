@@ -16,6 +16,18 @@
 		A0823563277B140F006B9FAE /* AddJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823562277B140F006B9FAE /* AddJournalView.swift */; };
 		A0823565277B2525006B9FAE /* OptionalBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823564277B2525006B9FAE /* OptionalBinding.swift */; };
 		A0823567277B7704006B9FAE /* LegacyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0823566277B7704006B9FAE /* LegacyTextView.swift */; };
+		A082C43F279422D10040B969 /* DashboardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A082C43E279422D10040B969 /* DashboardCardView.swift */; };
+		A083D53D27993F4A00FFD71D /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A083D53627993F4A00FFD71D /* Nunito-Regular.ttf */; };
+		A083D53E27993F4A00FFD71D /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A083D53727993F4A00FFD71D /* Nunito-Bold.ttf */; };
+		A083D53F27993F4A00FFD71D /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A083D53827993F4A00FFD71D /* Nunito-SemiBold.ttf */; };
+		A083D54027993F4A00FFD71D /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A083D53927993F4A00FFD71D /* Nunito-Light.ttf */; };
+		A083D54127993F4A00FFD71D /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A083D53A27993F4A00FFD71D /* Nunito-Medium.ttf */; };
+		A083D54227993F4A00FFD71D /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A083D53B27993F4A00FFD71D /* Nunito-Italic.ttf */; };
+		A083D54327993F4A00FFD71D /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A083D53C27993F4A00FFD71D /* Nunito-Black.ttf */; };
+		A083D5462799680900FFD71D /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A083D5452799680900FFD71D /* Dashboard.swift */; };
+		A083D5482799738D00FFD71D /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A083D5472799738D00FFD71D /* PlacesView.swift */; };
+		A083D54A2799777300FFD71D /* PlacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A083D5492799777300FFD71D /* PlacesViewModel.swift */; };
+		A083D54C2799817500FFD71D /* PlacesCoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A083D54B2799817500FFD71D /* PlacesCoreDataHelper.swift */; };
 		A08937FB278E9CFC0049D720 /* Alert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08937FA278E9CFC0049D720 /* Alert+Extension.swift */; };
 		A08937FE278F13CB0049D720 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08937FD278F13CB0049D720 /* Location.swift */; };
 		A09D7A4C2778687900D11842 /* EtchedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A4B2778687900D11842 /* EtchedApp.swift */; };
@@ -39,8 +51,8 @@
 		A09D7A7E2778DF1F00D11842 /* JournalMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A782778DF1F00D11842 /* JournalMO+CoreDataProperties.swift */; };
 		A09D7A802778E6C700D11842 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */; };
 		A09E4C07278DA02100EC2552 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E4C06278DA02100EC2552 /* LocationManager.swift */; };
-		A09E4C0C278DA6BF00EC2552 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E4C0B278DA6BF00EC2552 /* LocationViewModel.swift */; };
-		A09E4C0E278DA6CF00EC2552 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E4C0D278DA6CF00EC2552 /* LocationView.swift */; };
+		A09E4C0C278DA6BF00EC2552 /* AddPlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E4C0B278DA6BF00EC2552 /* AddPlaceViewModel.swift */; };
+		A09E4C0E278DA6CF00EC2552 /* AddPlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09E4C0D278DA6CF00EC2552 /* AddPlaceView.swift */; };
 		A09FE8C427897FCB00A044D2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8C327897FCA00A044D2 /* Date+Extension.swift */; };
 		A09FE8C627897FDB00A044D2 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8C527897FDB00A044D2 /* View+Extension.swift */; };
 		A09FE8C827897FEA00A044D2 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8C727897FEA00A044D2 /* FileManager+Extension.swift */; };
@@ -49,6 +61,7 @@
 		A09FE8D2278AEC4900A044D2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8D1278AEC4900A044D2 /* DetailViewModel.swift */; };
 		A09FE8D4278C3BF700A044D2 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8D3278C3BF700A044D2 /* ImagePickerController.swift */; };
 		A0A12ECE27866E7600945E6F /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A12ECD27866E7600945E6F /* PhotoPickerController.swift */; };
+		A0A1314E279370E100FDD6D1 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A1314D279370E100FDD6D1 /* DashboardView.swift */; };
 		A0AD0B48277CDCBB006EE7F7 /* EtchedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD0B47277CDCBB006EE7F7 /* EtchedTests.swift */; };
 		A0AD0B4F277CF0E4006EE7F7 /* JournalViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD0B4E277CF0E4006EE7F7 /* JournalViewModelTests.swift */; };
 		A0C4CCE2278420650079B525 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C4CCE1278420650079B525 /* String+Extension.swift */; };
@@ -74,6 +87,18 @@
 		A0823562277B140F006B9FAE /* AddJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJournalView.swift; sourceTree = "<group>"; };
 		A0823564277B2525006B9FAE /* OptionalBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalBinding.swift; sourceTree = "<group>"; };
 		A0823566277B7704006B9FAE /* LegacyTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegacyTextView.swift; sourceTree = "<group>"; };
+		A082C43E279422D10040B969 /* DashboardCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCardView.swift; sourceTree = "<group>"; };
+		A083D53627993F4A00FFD71D /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		A083D53727993F4A00FFD71D /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		A083D53827993F4A00FFD71D /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		A083D53927993F4A00FFD71D /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		A083D53A27993F4A00FFD71D /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		A083D53B27993F4A00FFD71D /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		A083D53C27993F4A00FFD71D /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		A083D5452799680900FFD71D /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		A083D5472799738D00FFD71D /* PlacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
+		A083D5492799777300FFD71D /* PlacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViewModel.swift; sourceTree = "<group>"; };
+		A083D54B2799817500FFD71D /* PlacesCoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCoreDataHelper.swift; sourceTree = "<group>"; };
 		A08937FA278E9CFC0049D720 /* Alert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Extension.swift"; sourceTree = "<group>"; };
 		A08937FD278F13CB0049D720 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A09D7A482778687900D11842 /* Etched.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etched.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +124,8 @@
 		A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		A09E4C05278D976B00EC2552 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A09E4C06278DA02100EC2552 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		A09E4C0B278DA6BF00EC2552 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
-		A09E4C0D278DA6CF00EC2552 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
+		A09E4C0B278DA6BF00EC2552 /* AddPlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewModel.swift; sourceTree = "<group>"; };
+		A09E4C0D278DA6CF00EC2552 /* AddPlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceView.swift; sourceTree = "<group>"; };
 		A09FE8C327897FCA00A044D2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8C527897FDB00A044D2 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8C727897FEA00A044D2 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
@@ -109,6 +134,7 @@
 		A09FE8D1278AEC4900A044D2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		A09FE8D3278C3BF700A044D2 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		A0A12ECD27866E7600945E6F /* PhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
+		A0A1314D279370E100FDD6D1 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		A0AD0B45277CDCBB006EE7F7 /* EtchedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtchedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AD0B47277CDCBB006EE7F7 /* EtchedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtchedTests.swift; sourceTree = "<group>"; };
 		A0AD0B4E277CF0E4006EE7F7 /* JournalViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModelTests.swift; sourceTree = "<group>"; };
@@ -133,6 +159,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A083D53527993F1A00FFD71D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A083D53C27993F4A00FFD71D /* Nunito-Black.ttf */,
+				A083D53727993F4A00FFD71D /* Nunito-Bold.ttf */,
+				A083D53B27993F4A00FFD71D /* Nunito-Italic.ttf */,
+				A083D53927993F4A00FFD71D /* Nunito-Light.ttf */,
+				A083D53A27993F4A00FFD71D /* Nunito-Medium.ttf */,
+				A083D53627993F4A00FFD71D /* Nunito-Regular.ttf */,
+				A083D53827993F4A00FFD71D /* Nunito-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A083D544279967EE00FFD71D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A083D5452799680900FFD71D /* Dashboard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A08937FC278F13AB0049D720 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +210,8 @@
 		A09D7A4A2778687900D11842 /* Etched */ = {
 			isa = PBXGroup;
 			children = (
+				A083D53527993F1A00FFD71D /* Fonts */,
+				A0A1314B279370B600FDD6D1 /* Dashboard */,
 				A09E4C08278DA67400EC2552 /* Location */,
 				A09E4C05278D976B00EC2552 /* Info.plist */,
 				A09FE8CC278AB3CB00A044D2 /* Managers */,
@@ -231,7 +281,8 @@
 		A09E4C09278DA68000EC2552 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				A09E4C0B278DA6BF00EC2552 /* LocationViewModel.swift */,
+				A09E4C0B278DA6BF00EC2552 /* AddPlaceViewModel.swift */,
+				A083D5492799777300FFD71D /* PlacesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -239,7 +290,8 @@
 		A09E4C0A278DA68E00EC2552 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A09E4C0D278DA6CF00EC2552 /* LocationView.swift */,
+				A09E4C0D278DA6CF00EC2552 /* AddPlaceView.swift */,
+				A083D5472799738D00FFD71D /* PlacesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,8 +346,27 @@
 				A09D7A7F2778E6C700D11842 /* CoreDataHelper.swift */,
 				A08206AD277DCB050036D8B9 /* PersistenceController.swift */,
 				A09E4C06278DA02100EC2552 /* LocationManager.swift */,
+				A083D54B2799817500FFD71D /* PlacesCoreDataHelper.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A0A1314B279370B600FDD6D1 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				A083D544279967EE00FFD71D /* Model */,
+				A0A1314C279370CD00FDD6D1 /* View */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		A0A1314C279370CD00FDD6D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0A1314D279370E100FDD6D1 /* DashboardView.swift */,
+				A082C43E279422D10040B969 /* DashboardCardView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A0AD0B46277CDCBB006EE7F7 /* EtchedTests */ = {
@@ -388,8 +459,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A083D53D27993F4A00FFD71D /* Nunito-Regular.ttf in Resources */,
 				A09D7A532778687B00D11842 /* Preview Assets.xcassets in Resources */,
+				A083D54027993F4A00FFD71D /* Nunito-Light.ttf in Resources */,
+				A083D53E27993F4A00FFD71D /* Nunito-Bold.ttf in Resources */,
+				A083D54127993F4A00FFD71D /* Nunito-Medium.ttf in Resources */,
+				A083D54227993F4A00FFD71D /* Nunito-Italic.ttf in Resources */,
 				A09D7A502778687B00D11842 /* Assets.xcassets in Resources */,
+				A083D53F27993F4A00FFD71D /* Nunito-SemiBold.ttf in Resources */,
+				A083D54327993F4A00FFD71D /* Nunito-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,8 +487,9 @@
 			files = (
 				A0A12ECE27866E7600945E6F /* PhotoPickerController.swift in Sources */,
 				A0C4CCE2278420650079B525 /* String+Extension.swift in Sources */,
+				A083D5462799680900FFD71D /* Dashboard.swift in Sources */,
 				A082353F27798AE0006B9FAE /* MoodMO+CoreDataProperties.swift in Sources */,
-				A09E4C0C278DA6BF00EC2552 /* LocationViewModel.swift in Sources */,
+				A09E4C0C278DA6BF00EC2552 /* AddPlaceViewModel.swift in Sources */,
 				A0823565277B2525006B9FAE /* OptionalBinding.swift in Sources */,
 				A08206B0277DE1C10036D8B9 /* AddEditJournalViewModel.swift in Sources */,
 				A09FE8C427897FCB00A044D2 /* Date+Extension.swift in Sources */,
@@ -420,13 +499,14 @@
 				A09D7A5B2778698C00D11842 /* OnboardingView.swift in Sources */,
 				A09D7A6A2778C25B00D11842 /* Journal.swift in Sources */,
 				A09D7A5F277869C700D11842 /* Page.swift in Sources */,
-				A09E4C0E278DA6CF00EC2552 /* LocationView.swift in Sources */,
+				A09E4C0E278DA6CF00EC2552 /* AddPlaceView.swift in Sources */,
 				A082353B27798A88006B9FAE /* LocationMO+CoreDataProperties.swift in Sources */,
 				A09D7A4E2778687900D11842 /* ContentView.swift in Sources */,
 				A08937FB278E9CFC0049D720 /* Alert+Extension.swift in Sources */,
 				A09D7A722778D41D00D11842 /* JournalMO.xcdatamodeld in Sources */,
 				A09D7A612778726B00D11842 /* ViewRouter.swift in Sources */,
 				A0823567277B7704006B9FAE /* LegacyTextView.swift in Sources */,
+				A083D5482799738D00FFD71D /* PlacesView.swift in Sources */,
 				A09D7A64277893B600D11842 /* MainTabView.swift in Sources */,
 				A09D7A66277896B200D11842 /* MainTabPage.swift in Sources */,
 				A09FE8D4278C3BF700A044D2 /* ImagePickerController.swift in Sources */,
@@ -437,7 +517,11 @@
 				A09FE8D2278AEC4900A044D2 /* DetailViewModel.swift in Sources */,
 				A0823563277B140F006B9FAE /* AddJournalView.swift in Sources */,
 				A09D7A5D277869A000D11842 /* OnboardingPageView.swift in Sources */,
+				A082C43F279422D10040B969 /* DashboardCardView.swift in Sources */,
+				A083D54C2799817500FFD71D /* PlacesCoreDataHelper.swift in Sources */,
 				A09FE8C827897FEA00A044D2 /* FileManager+Extension.swift in Sources */,
+				A083D54A2799777300FFD71D /* PlacesViewModel.swift in Sources */,
+				A0A1314E279370E100FDD6D1 /* DashboardView.swift in Sources */,
 				A09FE8CE278AB46E00A044D2 /* JournalDetailView.swift in Sources */,
 				A09D7A4C2778687900D11842 /* EtchedApp.swift in Sources */,
 				A09D7A7E2778DF1F00D11842 /* JournalMO+CoreDataProperties.swift in Sources */,

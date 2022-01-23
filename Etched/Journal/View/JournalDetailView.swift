@@ -9,10 +9,11 @@ import SwiftUI
 
 struct JournalDetailView: View {
     
-//    let journal: JournalMO
     @ObservedObject var viewModel: DetailViewModel
     @State private var image: Image?
     @State private var showingEditView = false
+    @State private var showDeleteAlert = false
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ScrollView {
@@ -55,20 +56,33 @@ struct JournalDetailView: View {
                     Button(viewModel.journal.mood!.emoji!) {}
                 }
                 Button {
-                    showingEditView = true
+                    showingEditView.toggle()
                 } label: {
                     Label("Edit", systemImage: "square.and.pencil")
+                        .font(.headline.bold())
+                }
+                Button {
+                    showDeleteAlert = true
+                } label: {
+                    Label("Delete", systemImage: "trash")
                         .font(.headline.bold())
                 }
             }
         }
         .sheet(isPresented: $showingEditView, onDismiss: {
+            print("on dismiss")
             if let journalImage = UIImage.loadFirst(from: viewModel.journal.wrappedSavedImages) {
                 image = Image(uiImage: journalImage)
             }
         }, content: {
             AddJournalView(viewModel: AddEditJournalViewModel(), selectedJournal: viewModel.journal)
         })
+        .alert("Are you sure you want to delete this journal?", isPresented: $showDeleteAlert) {
+            Button("Delete", role: .destructive) {
+                viewModel.delete()
+                dismiss()
+            }
+        }
         .onAppear {
             if let journalImage = UIImage.loadFirst(from: viewModel.journal.wrappedSavedImages) {
                 image = Image(uiImage: journalImage)

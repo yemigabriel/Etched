@@ -51,7 +51,7 @@ struct JournalCardView: View {
                 
                 .frame(maxWidth: .infinity)
                 .padding()
-                .background(Color(UIColor.systemGroupedBackground))
+                .background(Color(UIColor.systemBackground))
                 .cornerRadius(10)
                 .shadow(color: Color.purple.opacity(0.2), radius: 10, x: 5, y: 5)
                 
