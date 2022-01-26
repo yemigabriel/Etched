@@ -60,11 +60,17 @@
 		A09FE8D0278AE65C00A044D2 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8CF278AE65C00A044D2 /* UIImage+Extension.swift */; };
 		A09FE8D2278AEC4900A044D2 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8D1278AEC4900A044D2 /* DetailViewModel.swift */; };
 		A09FE8D4278C3BF700A044D2 /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FE8D3278C3BF700A044D2 /* ImagePickerController.swift */; };
+		A0A024DD279DCC3B00B2563E /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A024DC279DCC3B00B2563E /* Font+Extension.swift */; };
+		A0A024E1279DCEEA00B2563E /* MoodChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A024E0279DCEEA00B2563E /* MoodChartView.swift */; };
+		A0A024E4279DD47E00B2563E /* MoodChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A024E3279DD47E00B2563E /* MoodChartViewModel.swift */; };
 		A0A12ECE27866E7600945E6F /* PhotoPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A12ECD27866E7600945E6F /* PhotoPickerController.swift */; };
 		A0A1314E279370E100FDD6D1 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A1314D279370E100FDD6D1 /* DashboardView.swift */; };
 		A0AD0B48277CDCBB006EE7F7 /* EtchedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD0B47277CDCBB006EE7F7 /* EtchedTests.swift */; };
 		A0AD0B4F277CF0E4006EE7F7 /* JournalViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AD0B4E277CF0E4006EE7F7 /* JournalViewModelTests.swift */; };
 		A0C4CCE2278420650079B525 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C4CCE1278420650079B525 /* String+Extension.swift */; };
+		A0CC9B4A27A0593B00F16287 /* PieChartSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CC9B4927A0593B00F16287 /* PieChartSlice.swift */; };
+		A0CC9B4D27A0599E00F16287 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CC9B4C27A0599E00F16287 /* ChartData.swift */; };
+		A0CC9B4F27A05A3D00F16287 /* MoodCoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CC9B4E27A05A3D00F16287 /* MoodCoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,12 +139,18 @@
 		A09FE8CF278AE65C00A044D2 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A09FE8D1278AEC4900A044D2 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		A09FE8D3278C3BF700A044D2 /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		A0A024DC279DCC3B00B2563E /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		A0A024E0279DCEEA00B2563E /* MoodChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChartView.swift; sourceTree = "<group>"; };
+		A0A024E3279DD47E00B2563E /* MoodChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodChartViewModel.swift; sourceTree = "<group>"; };
 		A0A12ECD27866E7600945E6F /* PhotoPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerController.swift; sourceTree = "<group>"; };
 		A0A1314D279370E100FDD6D1 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		A0AD0B45277CDCBB006EE7F7 /* EtchedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EtchedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AD0B47277CDCBB006EE7F7 /* EtchedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtchedTests.swift; sourceTree = "<group>"; };
 		A0AD0B4E277CF0E4006EE7F7 /* JournalViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModelTests.swift; sourceTree = "<group>"; };
 		A0C4CCE1278420650079B525 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A0CC9B4927A0593B00F16287 /* PieChartSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartSlice.swift; sourceTree = "<group>"; };
+		A0CC9B4C27A0599E00F16287 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		A0CC9B4E27A05A3D00F16287 /* MoodCoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodCoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +222,7 @@
 		A09D7A4A2778687900D11842 /* Etched */ = {
 			isa = PBXGroup;
 			children = (
+				A0A024DE279DCEB200B2563E /* Mood */,
 				A083D53527993F1A00FFD71D /* Fonts */,
 				A0A1314B279370B600FDD6D1 /* Dashboard */,
 				A09E4C08278DA67400EC2552 /* Location */,
@@ -305,6 +318,7 @@
 				A09FE8C727897FEA00A044D2 /* FileManager+Extension.swift */,
 				A09FE8CF278AE65C00A044D2 /* UIImage+Extension.swift */,
 				A08937FA278E9CFC0049D720 /* Alert+Extension.swift */,
+				A0A024DC279DCC3B00B2563E /* Font+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,8 +361,36 @@
 				A08206AD277DCB050036D8B9 /* PersistenceController.swift */,
 				A09E4C06278DA02100EC2552 /* LocationManager.swift */,
 				A083D54B2799817500FFD71D /* PlacesCoreDataHelper.swift */,
+				A0CC9B4E27A05A3D00F16287 /* MoodCoreDataHelper.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		A0A024DE279DCEB200B2563E /* Mood */ = {
+			isa = PBXGroup;
+			children = (
+				A0CC9B4B27A0599300F16287 /* Model */,
+				A0A024E2279DD44400B2563E /* ViewModel */,
+				A0A024DF279DCEC800B2563E /* View */,
+			);
+			path = Mood;
+			sourceTree = "<group>";
+		};
+		A0A024DF279DCEC800B2563E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0A024E0279DCEEA00B2563E /* MoodChartView.swift */,
+				A0CC9B4927A0593B00F16287 /* PieChartSlice.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0A024E2279DD44400B2563E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0A024E3279DD47E00B2563E /* MoodChartViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A0A1314B279370B600FDD6D1 /* Dashboard */ = {
@@ -376,6 +418,14 @@
 				A0AD0B4E277CF0E4006EE7F7 /* JournalViewModelTests.swift */,
 			);
 			path = EtchedTests;
+			sourceTree = "<group>";
+		};
+		A0CC9B4B27A0599300F16287 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A0CC9B4C27A0599E00F16287 /* ChartData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -499,6 +549,7 @@
 				A09D7A5B2778698C00D11842 /* OnboardingView.swift in Sources */,
 				A09D7A6A2778C25B00D11842 /* Journal.swift in Sources */,
 				A09D7A5F277869C700D11842 /* Page.swift in Sources */,
+				A0A024DD279DCC3B00B2563E /* Font+Extension.swift in Sources */,
 				A09E4C0E278DA6CF00EC2552 /* AddPlaceView.swift in Sources */,
 				A082353B27798A88006B9FAE /* LocationMO+CoreDataProperties.swift in Sources */,
 				A09D7A4E2778687900D11842 /* ContentView.swift in Sources */,
@@ -513,6 +564,7 @@
 				A09D7A7D2778DF1F00D11842 /* JournalMO+CoreDataClass.swift in Sources */,
 				A09FE8C627897FDB00A044D2 /* View+Extension.swift in Sources */,
 				A09D7A682778B34500D11842 /* JournalListView.swift in Sources */,
+				A0CC9B4F27A05A3D00F16287 /* MoodCoreDataHelper.swift in Sources */,
 				A09D7A802778E6C700D11842 /* CoreDataHelper.swift in Sources */,
 				A09FE8D2278AEC4900A044D2 /* DetailViewModel.swift in Sources */,
 				A0823563277B140F006B9FAE /* AddJournalView.swift in Sources */,
@@ -522,16 +574,20 @@
 				A09FE8C827897FEA00A044D2 /* FileManager+Extension.swift in Sources */,
 				A083D54A2799777300FFD71D /* PlacesViewModel.swift in Sources */,
 				A0A1314E279370E100FDD6D1 /* DashboardView.swift in Sources */,
+				A0CC9B4D27A0599E00F16287 /* ChartData.swift in Sources */,
 				A09FE8CE278AB46E00A044D2 /* JournalDetailView.swift in Sources */,
 				A09D7A4C2778687900D11842 /* EtchedApp.swift in Sources */,
 				A09D7A7E2778DF1F00D11842 /* JournalMO+CoreDataProperties.swift in Sources */,
 				A09FE8D0278AE65C00A044D2 /* UIImage+Extension.swift in Sources */,
+				A0A024E1279DCEEA00B2563E /* MoodChartView.swift in Sources */,
 				A09D7A7A2778DF1F00D11842 /* LocationMO+CoreDataProperties.swift in Sources */,
 				A08206AE277DCB050036D8B9 /* PersistenceController.swift in Sources */,
 				A08937FE278F13CB0049D720 /* Location.swift in Sources */,
 				A0823541277A314B006B9FAE /* JournalCardView.swift in Sources */,
 				A09D7A792778DF1F00D11842 /* LocationMO+CoreDataClass.swift in Sources */,
+				A0A024E4279DD47E00B2563E /* MoodChartViewModel.swift in Sources */,
 				A09E4C07278DA02100EC2552 /* LocationManager.swift in Sources */,
+				A0CC9B4A27A0593B00F16287 /* PieChartSlice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

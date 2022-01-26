@@ -15,7 +15,7 @@ class JournalListViewModel: ObservableObject {
     @Published var journals = [JournalMO]()
     @Published var selectedIndex = 0
     @Published var showingEditView = false
-    @Published var isDetailView = true
+    @Published var showDetailView = false
     @Published var showDeleteAlert = false
     @Published var selectedJournal: JournalMO?
     
@@ -23,10 +23,9 @@ class JournalListViewModel: ObservableObject {
     
     init(journalPublisher: AnyPublisher<[JournalMO], Never> =
          CoreDataHelper.shared.journals.eraseToAnyPublisher()) {
-        cancellable = journalPublisher.sink(receiveValue: { journals in
-            print("UPDATED JOURNAL COUNT: \(journals.count)")
+        cancellable = journalPublisher.sink(receiveValue: { [weak self] journals in
             DispatchQueue.main.async {
-                self.journals = journals.filter{$0.id != nil}
+                self?.journals = journals.filter{$0.id != nil}
             }
         })
     }

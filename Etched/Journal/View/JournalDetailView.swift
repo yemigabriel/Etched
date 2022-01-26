@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct JournalDetailView: View {
     
@@ -75,7 +76,8 @@ struct JournalDetailView: View {
                 image = Image(uiImage: journalImage)
             }
         }, content: {
-            AddJournalView(viewModel: AddEditJournalViewModel(), selectedJournal: viewModel.journal)
+//            AddJournalView(viewModel: AddEditJournalViewModel(), selectedJournal: viewModel.journal)
+            AddJournalView(viewModel: AddEditJournalViewModel(journalPublisher: Just(viewModel.journal).eraseToAnyPublisher()))
         })
         .alert("Are you sure you want to delete this journal?", isPresented: $showDeleteAlert) {
             Button("Delete", role: .destructive) {

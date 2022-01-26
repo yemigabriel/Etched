@@ -99,10 +99,10 @@ struct AddJournalView: View {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.7 ) {
 //                                    isInputActive = viewModel.isInputActive //@FocusState from VM
                                     isInputActive = true
-                                    if let selectedJournal = selectedJournal {
-                                        viewModel.journal = selectedJournal
-                                        
-                                        if let journalImage = UIImage.loadFirst(from: selectedJournal.wrappedSavedImages) {
+                                    
+                                    // for edit
+                                    if viewModel.journal.content != nil {
+                                        if let journalImage = UIImage.loadFirst(from: viewModel.journal.wrappedSavedImages) {
                                             image = Image(uiImage: journalImage)
                                         }
                                     }

@@ -12,7 +12,7 @@ import Combine
 
 class AddEditJournalViewModel: ObservableObject {
     
-    @Published var journal: JournalMO
+    @Published var journal: JournalMO = JournalMO(context: CoreDataHelper.shared.container.viewContext)
     @Published var contentHasChanged = false
     @Published var showPlaceholder = true
     @Published var isInputActive = true
@@ -28,41 +28,39 @@ class AddEditJournalViewModel: ObservableObject {
     
     let placeholder = "Start writing ..."
     
-    private var coreDataHelper: CoreDataHelper
+//    private var coreDataHelper: CoreDataHelper
     
     init(journalPublisher: AnyPublisher<JournalMO, Never> = CoreDataHelper.shared.journal.eraseToAnyPublisher()
          ) {
-        coreDataHelper = CoreDataHelper.shared
-        journal = JournalMO(context: coreDataHelper.container.viewContext)
 //        isInputActive = false
         print("viewModel source init begins")
-        cancellable = journalPublisher.sink(receiveValue: { journal in
-            print("UPDATED JOURNAL: \(journal.wrappedId)")
+        cancellable = journalPublisher.sink(receiveValue: { value in
+            print("UPDATED JOURNAL: \(value.wrappedId)")
             DispatchQueue.main.async {
-                self.journal = journal
+                self.journal = value
             }
         })
     }
 
     func add() {
         if journal.id == nil {
-            coreDataHelper.add(journal: journal)
+            CoreDataHelper.shared.add(journal: journal)
         } else {
             edit()
         }
     }
     
     func edit() {
-        coreDataHelper.edit(journal: journal)
+        CoreDataHelper.shared.edit(journal: journal)
     }
     
     func clearJournal(){
-        coreDataHelper.delete(journal: journal)
+        CoreDataHelper.shared.delete(journal: journal)
     }
     
     // Rolls back uncomitted changes
     func rollBack() {
-        coreDataHelper.container.viewContext.rollback()
+        CoreDataHelper.shared.container.viewContext.rollback()
     }
     
     func removeFocus() {

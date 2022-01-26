@@ -68,6 +68,7 @@ struct DashboardView: View {
             .navigationTitle("Etched")
             .background(Color(UIColor.systemGray5))
         }
+//        .navigationViewStyle(.stack)
     }
     
     @ViewBuilder
@@ -76,7 +77,7 @@ struct DashboardView: View {
         case .showPlaces:
             PlacesView()
         case .showMood:
-            Text("Show Mood")
+            MoodChartView()
         default:
             Text("Add Journal")
         }

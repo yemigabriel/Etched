@@ -32,6 +32,13 @@ extension MoodMO {
         emoji ?? ""
     }
     
+    var wrappedJournals: [JournalMO] {
+        guard let journals = journals?.allObjects as? [JournalMO] else {
+            return []
+        }
+        return journals
+    }
+    
 }
 
 // MARK: Generated accessors for journals
