@@ -1,6 +1,8 @@
 
 # Etched -  A Daily Journal
 
+<img src="https://serene-sinoussi-adb657.netlify.app/img/logo.png" width="50">
+
 Etched is a daily journal app that helps capture, organize and track users' thoughts, ideas, goals, opinions etc.
 Journaling can be an amazing way to build a relationship with yourself, track personal progress, and manage anxiety or stress.
 
@@ -27,6 +29,11 @@ Journaling can be an amazing way to build a relationship with yourself, track pe
 ## Screenshots
 
 <img src="https://drive.google.com/uc?export=view&id=1SOoiyYEdw0wYN1c9hN4424TgTcOZRmHT" width="300"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://drive.google.com/uc?export=view&id=1r6SRSUcN6wXxRz-GJkJvUEN50MxEm3SA" width="300"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://drive.google.com/uc?export=view&id=1RzMkPe8EEBUg36-WDxhQcumla2leofWg" width="300"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://drive.google.com/uc?export=view&id=1zH4JstEqtFFvkvJsVMP_FSPF5X6X6suq" width="300">
+
+
+## Appstore
+https://apps.apple.com/us/app/etched-a-daily-journal/id1607879708
+
 
 ## Acknowledgements
 
