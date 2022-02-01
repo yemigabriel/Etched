@@ -59,11 +59,10 @@ struct AddPlaceView: View {
                 }
                 .alert(isPresented: $viewModel.error != nil ) {
                     Alert(error: viewModel.error, primaryButtonTitle: "Settings", secondaryButtonTitle: "Not Now") {
-                        self.viewModel.requestLocationSettings()
+                        UIApplication.requestSettings()
                     } secondaryAction: {
                         dismiss()
                     }
-                    
                 }
             
             VStack(spacing: 0) {

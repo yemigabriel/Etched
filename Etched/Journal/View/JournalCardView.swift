@@ -70,9 +70,6 @@ struct JournalCardView: View {
                 
             }
         }
-        .onAppear(perform: {
-            print(journal.wrappedContent, journal.images)
-        })
         .padding(.vertical)
         
     }

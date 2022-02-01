@@ -20,3 +20,10 @@ func !=<T>(lhs: Binding<Optional<T>>, rhs: Optional<T>) -> Binding<Bool> where T
         set: { lhs.wrappedValue = $0 as? T ?? nil }
         )
 }
+
+//func &&(lhs: Binding<Bool>, rhs: Binding<Bool>) -> Binding<Bool> {
+//    Binding (
+//        get:{lhs.wrappedValue && rhs.wrappedValue},
+//        set: {$0.wrappedValue && rhs.wrappedValue}
+//    )
+//}

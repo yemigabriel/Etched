@@ -8,40 +8,42 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @State private var currentPage = 0
     @State private var isAddJournalShowing = false
     @Environment(\.dismiss) var dismiss
+    @AppStorage(wrappedValue: false, "LOCKED") var isLocked
     
     
     var body: some View {
         ZStack (alignment: .bottom) {
             
-            TabView(selection: $currentPage) {
+            TabView{
                 DashboardView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
-//                Text("Timeline")
-//                    .tabItem {
-//                        Label("Timeline", systemImage: "calendar")
-//                    }
+                
                 Text("Add")
                     .tabItem {
                             Label("Add", systemImage: "plus")
                     }
-                    .foregroundColor(.green)
-//                Text("Stats")
-//                    .tabItem {
-//                        Label("Stats", systemImage: "chart.line.uptrend.xyaxis")
-//                    }
-                Text("Settings")
+                
+                SettingsView()
                     .tabItem {
                         Label("Settings", systemImage: "gearshape")
                     }
             }
+            .onReceive(NotificationCenter.default.publisher(for: Notification.Name(SettingsViewModel.notificationId)), perform: { response in
+                if (response.object as? UNNotificationContent) != nil {
+                    isAddJournalShowing = true
+                }
+            })
             .sheet(isPresented: $isAddJournalShowing) {
                 AddJournalView()
             }
+            .fullScreenCover(isPresented: $isLocked, content: {
+                SetPassCode(passcodeState: PasscodeState.enterPasscode)
+            })
+            
             
             Button{
                 print("add")

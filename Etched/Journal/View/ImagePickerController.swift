@@ -33,7 +33,6 @@ struct ImagePickerController: UIViewControllerRepresentable {
             do {
                 try FileManager.default.copyItem(at: imageUrl, to: savedImagePath)
                 parent.imageUrlPath = savedImagePath.lastPathComponent
-                print(parent.imageUrlPath)
                 parent.image = image
             } catch {
                 print(error.localizedDescription)

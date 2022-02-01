@@ -43,10 +43,7 @@ final class LocationManager: NSObject {
     
     static let shared = LocationManager()
     
-    override init(/*center: CLLocationCoordinate2D, radius: CLLocationDistance*/) {
-//        self.center = center
-        
-//        self.radius = radius
+    override init() {
         super.init()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest

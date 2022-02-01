@@ -14,10 +14,4 @@ class ViewRouter: ObservableObject {
     enum AppView {
         case onboarding, main
     }
-
-//    @Published var currentView = AppView.onboarding
-//
-//    init() {
-//        currentView = isNewUser ? AppView.onboarding : AppView.main
-//    }
 }

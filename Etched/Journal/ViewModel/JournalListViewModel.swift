@@ -38,4 +38,11 @@ class JournalListViewModel: ObservableObject {
         CoreDataHelper.shared.delete(journal: journals[selectedIndex])
     }
     
+    func getJournals(by mood: String) {
+        journals = journals.filter {
+            guard let wrappedMood = $0.wrappedMood else { return false }
+            return wrappedMood.emoji == mood
+        }
+    }
+    
 }

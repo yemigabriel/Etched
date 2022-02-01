@@ -17,6 +17,6 @@ struct Page {
     static let pages = [
         Page(id: UUID(), description: "Capture moments in your daily journal", imageName: "page-1", background: Color.green),
         Page(id: UUID(), description: "Secure your private thoughts", imageName: "page-2", background: Color.orange),
-        Page(id: UUID(), description: "Backup so you never lose anything", imageName: "page-3", background: Color.purple),
+        Page(id: UUID(), description: "Sync with your iCloud so you share across multiple devices", imageName: "page-3", background: Color.purple),
     ]
 }

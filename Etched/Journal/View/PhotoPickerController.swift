@@ -43,7 +43,6 @@ struct PhotoPickerController: UIViewControllerRepresentable {
                     do {
                         try data.write(to: imagePath, options: .completeFileProtection)
                         self.parent.imagePath = imagePath.lastPathComponent
-                        print(self.parent.imagePath)
                         print(imagePath)
 //                        DispatchQueue.main.async { [weak self] in
                             self.parent.image = image

@@ -23,11 +23,10 @@ class PlacesViewModel: ObservableObject {
          PlacesCoreDataHelper.shared.places.eraseToAnyPublisher()) {
         cancellable = places.sink(receiveValue: { [weak self] places in
             self?.places = places.filter{$0.wrappedJournals.isNotEmpty()}
-            print("Places: ", self?.places.count)
-            try? places.forEach {
+            places.forEach {
                 if let journals = $0.journals?.allObjects as? [JournalMO] {
                     print("Place ", $0.wrappedId, journals.count)
-                    try? journals.forEach {
+                    journals.forEach {
                         print("Journal: ", $0.wrappedTimestamp)
                     }
                 }
@@ -36,7 +35,6 @@ class PlacesViewModel: ObservableObject {
                 self?.region.center.latitude = place.latitude
                 self?.region.center.longitude = place.longitude
             }
-            print(places.first?.latitude)
         })
     }
     

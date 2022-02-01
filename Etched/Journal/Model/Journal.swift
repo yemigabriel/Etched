@@ -56,7 +56,7 @@ struct Journal: Identifiable, Codable {
     ]
 }
 
-struct Mood: Identifiable, Codable {
+struct Mood: Identifiable, Codable, Equatable {
     var id: UUID
     var name: String
     var emoji: String

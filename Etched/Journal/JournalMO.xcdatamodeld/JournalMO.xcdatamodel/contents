@@ -16,28 +16,16 @@
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="journals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="JournalMO" inverseName="location" inverseEntity="JournalMO"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="latitude"/>
-                <constraint value="longitude"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
     </entity>
     <entity name="MoodMO" representedClassName="MoodMO" syncable="YES">
         <attribute name="emoji" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="journals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="JournalMO" inverseName="mood" inverseEntity="JournalMO"/>
-        <uniquenessConstraints>
-            <uniquenessConstraint>
-                <constraint value="name"/>
-                <constraint value="emoji"/>
-            </uniquenessConstraint>
-        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="JournalMO" positionX="-36" positionY="9" width="128" height="149"/>
-        <element name="LocationMO" positionX="0" positionY="90" width="128" height="104"/>
-        <element name="MoodMO" positionX="27" positionY="99" width="128" height="89"/>
+        <element name="LocationMO" positionX="0" positionY="90" width="128" height="118"/>
+        <element name="MoodMO" positionX="27" positionY="99" width="128" height="103"/>
     </elements>
 </model>

@@ -13,9 +13,13 @@ struct MoodChartView: View {
     let legendColumns = [
         GridItem(.adaptive(minimum: 100, maximum: 200))
     ]
+    let message = "No journals with moods have been created"
     
     var body: some View {
         VStack {
+            if viewModel.chartData.isEmpty {
+                EmptyList(message: message)
+            }
             ZStack(alignment: .center) {
                 GeometryReader { proxy in
                     let frame = proxy.frame(in: .local)
@@ -60,13 +64,13 @@ struct MoodChartView: View {
             }
             .padding()
             
-            
             if let selectedMood = viewModel.selectedMood {
                 NavigationLink("", isActive: $viewModel.showDetail) {
                     List {
-                        JournalListView()
+                        JournalListView(moodEmoji: selectedMood)
                     }
                     .navigationTitle("Feeling \(selectedMood)")
+                    .background(Color(UIColor.systemGray5))
                 }
             }
             

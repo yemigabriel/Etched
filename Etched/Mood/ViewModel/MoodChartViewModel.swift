@@ -39,7 +39,6 @@ class MoodChartViewModel: ObservableObject {
             }
         }
         getPieSlices(chartData)
-        print("CHart data: ", chartData.count)
         self.chartData = chartData
     }
     

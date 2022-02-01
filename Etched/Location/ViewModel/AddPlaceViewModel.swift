@@ -90,11 +90,4 @@ class AddPlaceViewModel: ObservableObject {
         LocationManager.shared.getLocationName(for: placemark)
     }
     
-    func requestLocationSettings() {
-        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-        if UIApplication.shared.canOpenURL(settingsUrl) {
-            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in })
-        }
-    }
-    
 }
